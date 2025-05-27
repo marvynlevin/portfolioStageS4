@@ -35,7 +35,7 @@
     <teleport to="body">
       <div
           v-if="isMounted"
-          class="fixed top-0 left-0 h-full w-[100vw] sm:w-[80vw] bg-vanilla z-20 shadow-lg"
+          class="fixed top-0 left-0 h-full w-[100vw] sm:w-[80vw] bg-vanilla z-[99999] shadow-lg"
           :class="animationClass"
           @animationend="handleAnimationEnd"
       >

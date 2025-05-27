@@ -1,16 +1,19 @@
 <template>
   <div class="bg-vanilla h-full">
-    <NavbarComponent/>
-    <CustomCursorComponent/>
-    <ScrollToTopComponent/>
+    <div v-if="!appReady" class="fixed inset-0 bg-vanilla z-[99999]"></div>
 
-    <router-view/>
+    <NavbarComponent v-if="appReady"/>
+    <CustomCursorComponent v-if="appReady"/>
+    <ScrollToTopComponent v-if="appReady"/>
 
-    <FooterComponent/>
+    <router-view v-if="appReady"/>
+
+    <FooterComponent v-if="appReady"/>
   </div>
 </template>
 
 <script>
+import {ref, onMounted} from 'vue'
 import NavbarComponent from './components/navbar/NavbarComponent.vue';
 import CustomCursorComponent from "@/components/cursor/CustomCursorComponent.vue";
 import FooterComponent from "@/components/footer/FooterComponent.vue";
@@ -24,7 +27,20 @@ export default {
     NavbarComponent,
     FooterComponent,
   },
-};
+  setup() {
+    const appReady = ref(false)
+
+    onMounted(() => {
+      document.documentElement.classList.add('is-loading')
+      setTimeout(() => {
+        appReady.value = true
+        document.documentElement.classList.remove('is-loading')
+      }, 100)
+    })
+
+    return {appReady}
+  }
+}
 </script>
 
 <style>
@@ -72,6 +88,10 @@ body {
       scrollbar-width: none;
     }
   }
+}
+
+html.is-loading, html.is-loading * {
+  cursor: none !important;
 }
 
 /* BUTTONS */
