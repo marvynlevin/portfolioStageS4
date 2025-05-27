@@ -3,13 +3,13 @@
 GLOBAL CSS
 
 */
-/*@tailwind base;*/
-/*@tailwind components;*/
-/*@tailwind utilities;*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/*body {*/
-/*    @apply text-espresso font-playfair text-[22px];*/
-/*}*/
+body {
+    @apply text-espresso font-playfair text-[22px];
+}
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -68,30 +68,30 @@ METHODS
 /*}*/
 
 
-/*.text-12-13-16-20 {*/
-/*@apply text-[12px] sm:text-[13px] md:text-[16px] lg:text-[20px];*/
-/*}*/
-/*.text-14-15-16-20 {*/
-/*@apply text-[14px] sm:text-[15px] md:text-[16px] lg:text-[20px];*/
-/*}*/
-/*.text-14-15-18-22 {*/
-/*@apply text-[14px] sm:text-[15px] md:text-[18px] lg:text-[22px];*/
-/*}*/
-/*.text-17-18-21-25 {*/
-/*@apply text-[17px] sm:text-[18px] md:text-[21px] lg:text-[25px];*/
-/*}*/
-/*.text-18-19-24-30 {*/
-/*@apply text-[18px] sm:text-[19px] md:text-[24px] lg:text-[30px];*/
-/*}*/
-/*.text-35-50-60-80 {*/
-/*@apply text-[35px] sm:text-[50px] md:text-[60px] lg:text-[80px];*/
-/*}*/
-/*.text-75-80-90-100 {*/
-/*@apply text-[75px] sm:text-[80px] md:text-[90px] lg:text-[100px];*/
-/*}*/
-/*.text-45-80-90-100 {*/
-/*@apply text-[45px] sm:text-[80px] md:text-[90px] lg:text-[100px];*/
-/*}*/
+.text-12-13-16-20 {
+@apply text-[12px] sm:text-[13px] md:text-[16px] lg:text-[20px];
+}
+.text-14-15-16-20 {
+@apply text-[14px] sm:text-[15px] md:text-[16px] lg:text-[20px];
+}
+.text-14-15-18-22 {
+@apply text-[14px] sm:text-[15px] md:text-[18px] lg:text-[22px];
+}
+.text-17-18-21-25 {
+@apply text-[17px] sm:text-[18px] md:text-[21px] lg:text-[25px];
+}
+.text-18-19-24-30 {
+@apply text-[18px] sm:text-[19px] md:text-[24px] lg:text-[30px];
+}
+.text-35-50-60-80 {
+@apply text-[35px] sm:text-[50px] md:text-[60px] lg:text-[80px];
+}
+.text-75-80-90-100 {
+@apply text-[75px] sm:text-[80px] md:text-[90px] lg:text-[100px];
+}
+.text-45-80-90-100 {
+@apply text-[45px] sm:text-[80px] md:text-[90px] lg:text-[100px];
+}
 
 
 .scrollbar-hide {
