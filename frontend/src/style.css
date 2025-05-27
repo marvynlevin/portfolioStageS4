@@ -3,6 +3,9 @@
 GLOBAL CSS
 
 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
     @apply text-espresso font-playfair text-[22px];
