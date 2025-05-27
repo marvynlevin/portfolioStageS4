@@ -28,18 +28,19 @@ export default {
 </script>
 
 <style>
-/*
+/* GLOBAL CSS */
 
-GLOBAL CSS
-
-*/
 body {
-    @apply text-espresso font-playfair text-[22px];
+  color: #3C2821; /* text-espresso */
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
 }
+
+/* Scrollbar */
 
 ::-webkit-scrollbar {
   width: 12px;
-  background-color: #FFF3E2;
+  background-color: #FFF3E2; /* vanilla */
 }
 
 ::-webkit-scrollbar-track {
@@ -51,13 +52,13 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 7px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  background-color: #BEAAAA;
+  background-color: #BEAAAA; /* blush */
 }
 
 @-moz-document url-prefix() {
   * {
     scrollbar-width: thin;
-    scrollbar-color: #3C2821 #F3E8D8;
+    scrollbar-color: #3C2821 #F3E8D8; /* espresso + linen */
   }
 }
 
@@ -73,59 +74,197 @@ body {
   }
 }
 
-
-/*
-
-METHODS
-
-*/
+/* BUTTONS */
 
 .btn-espresso {
-  @apply flex items-center justify-center gap-2 bg-espresso text-vanilla px-8 py-1 sm:py-2 rounded-md italic font-bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #3C2821;
+  color: #FFF3E2;
+  padding: 0.25rem 2rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-radius: 0.375rem;
+  font-style: italic;
+  font-weight: 700;
 }
+
+@media (min-width: 640px) {
+  .btn-espresso {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
 .btn-espresso:hover {
-  @apply outline-2 outline-espresso bg-vanilla text-espresso;
+  outline: 2px solid #3C2821;
+  background-color: #FFF3E2;
+  color: #3C2821;
 }
+
 .btn-espresso:hover i {
-  @apply text-espresso;
+  color: #3C2821;
 }
+
 .btn-espresso-disabled {
-  @apply flex items-center justify-center gap-2 outline-2 outline-espresso bg-vanilla text-espresso px-8 py-1 sm:py-2 rounded-md italic font-bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  outline: 2px solid #3C2821;
+  background-color: #FFF3E2;
+  color: #3C2821;
+  padding: 0.25rem 2rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-radius: 0.375rem;
+  font-style: italic;
+  font-weight: 700;
 }
+
+@media (min-width: 640px) {
+  .btn-espresso-disabled {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* RESPONSIVE TEXT SIZES */
 
 
 .text-12-13-16-20 {
-@apply text-[12px] sm:text-[13px] md:text-[16px] lg:text-[20px];
+  font-size: 12px;
 }
+
 .text-14-15-16-20 {
-@apply text-[14px] sm:text-[15px] md:text-[16px] lg:text-[20px];
+  font-size: 14px;
 }
+
 .text-14-15-18-22 {
-@apply text-[14px] sm:text-[15px] md:text-[18px] lg:text-[22px];
+  font-size: 14px;
 }
+
 .text-17-18-21-25 {
-@apply text-[17px] sm:text-[18px] md:text-[21px] lg:text-[25px];
+  font-size: 17px;
 }
+
 .text-18-19-24-30 {
-@apply text-[18px] sm:text-[19px] md:text-[24px] lg:text-[30px];
+  font-size: 18px;
 }
+
 .text-35-50-60-80 {
-@apply text-[35px] sm:text-[50px] md:text-[60px] lg:text-[80px];
+  font-size: 35px;
 }
+
 .text-75-80-90-100 {
-@apply text-[75px] sm:text-[80px] md:text-[90px] lg:text-[100px];
+  font-size: 75px;
 }
+
 .text-45-80-90-100 {
-@apply text-[45px] sm:text-[80px] md:text-[90px] lg:text-[100px];
+  font-size: 45px;
 }
 
+@media (min-width: 640px) {
+  .text-12-13-16-20 {
+    font-size: 13px;
+  }
 
-.scrollbar-hide {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+  .text-14-15-16-20 {
+    font-size: 15px;
+  }
+
+  .text-14-15-18-22 {
+    font-size: 15px;
+  }
+
+  .text-17-18-21-25 {
+    font-size: 18px;
+  }
+
+  .text-18-19-24-30 {
+    font-size: 19px;
+  }
+
+  .text-35-50-60-80 {
+    font-size: 50px;
+  }
+
+  .text-75-80-90-100 {
+    font-size: 80px;
+  }
+
+  .text-45-80-90-100 {
+    font-size: 80px;
+  }
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+@media (min-width: 768px) {
+  .text-12-13-16-20 {
+    font-size: 16px;
+  }
+
+  .text-14-15-16-20 {
+    font-size: 16px;
+  }
+
+  .text-14-15-18-22 {
+    font-size: 18px;
+  }
+
+  .text-17-18-21-25 {
+    font-size: 21px;
+  }
+
+  .text-18-19-24-30 {
+    font-size: 24px;
+  }
+
+  .text-35-50-60-80 {
+    font-size: 60px;
+  }
+
+  .text-75-80-90-100 {
+    font-size: 90px;
+  }
+
+  .text-45-80-90-100 {
+    font-size: 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-12-13-16-20 {
+    font-size: 20px;
+  }
+
+  .text-14-15-16-20 {
+    font-size: 20px;
+  }
+
+  .text-14-15-18-22 {
+    font-size: 22px;
+  }
+
+  .text-17-18-21-25 {
+    font-size: 25px;
+  }
+
+  .text-18-19-24-30 {
+    font-size: 30px;
+  }
+
+  .text-35-50-60-80 {
+    font-size: 80px;
+  }
+
+  .text-75-80-90-100 {
+    font-size: 100px;
+  }
+
+  .text-45-80-90-100 {
+    font-size: 100px;
+  }
 }
 </style>
