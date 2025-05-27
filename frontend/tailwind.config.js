@@ -5,7 +5,7 @@ import typography from '@tailwindcss/typography'
 export default {
     content: [
         './index.html',
-        './src/**/*.{html,vue,js,ts,jsx,tsx}'
+        './src/**/*.{html,vue,js,ts,jsx,tsx,css}'
     ],
     theme: {
         extend: {
