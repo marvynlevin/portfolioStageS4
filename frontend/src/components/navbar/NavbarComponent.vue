@@ -65,7 +65,7 @@
       ref="animatedDiv"
       id="animatedDiv"
       :class="[
-      'origin-top m-0 py-6 bg-vanilla sm:hidden justify-center sm:space-x-9',
+      'origin-top m-0 py-6 bg-vanilla sm:hidden justify-center sm:space-x-9 overflow-x-hidden',
       isVisible ? 'flex h-[100vh]' : 'hidden',
       animationClass
     ]"
@@ -102,25 +102,25 @@
           @click="unsetScale"
           :to="{ name: 'home', hash: '#' + 'presentation' }">
       <span
-          class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-1 -mb-6">Présentation</span>
+          class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-1 -mb-10">Présentation</span>
       </router-link>
       <router-link
           @click="unsetScale"
           :to="{ name: 'home', hash: '#' + 'entreprise' }">
       <span
-          class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-2 -mb-6">Entreprise</span>
+          class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-2 -mb-10">Entreprise</span>
       </router-link>
       <router-link
           @click="unsetScale"
           :to="{ name: 'home', hash: '#' + 'stage' }">
   <span
-      class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-3 -mb-6">Stage</span>
+      class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-3 -mb-10">Stage</span>
       </router-link>
       <router-link
           @click="unsetScale"
           :to="{ name: 'home', hash: '#' + 'competences' }">
     <span
-        class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-4 -mb-6">Compétences</span>
+        class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-4 -mb-10">Compétences</span>
       </router-link>
 
       <div class="flex flex-row gap-4 mt-auto">
