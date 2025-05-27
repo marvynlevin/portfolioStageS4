@@ -1,7 +1,7 @@
 <template>
   <div
     ref="cursor"
-    class="fixed pointer-events-none z-[99999] w-8 h-8 transition-transform duration-200"
+    class="hidden sm:block fixed pointer-events-none z-[99999] w-8 h-8 transition-transform duration-200"
     :class="{ 'scale-125 opacity-30': isHovering }"
     :style="cursorStyle"
   >
