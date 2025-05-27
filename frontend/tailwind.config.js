@@ -3,11 +3,15 @@ import typography from '@tailwindcss/typography'
 
 /** @type {import('tailwindcss').Config} */
 export default {
+    content: [
+        './index.html',
+        './src/**/*.{html,vue,js,ts,jsx,tsx}'
+    ],
     theme: {
-        fontFamily: {
-            playfair: ['"Playfair Display"', 'serif'],
-        },
         extend: {
+            fontFamily: {
+                playfair: ['"Playfair Display"', 'serif'],
+            },
             colors: {
                 espresso: '#3C2821',
                 mocha: '#583C0E',
@@ -27,8 +31,8 @@ export default {
             },
             keyframes: {
                 floatY: {
-                    '0%, 100%': {transform: 'translateY(0)'},
-                    '50%': {transform: 'translateY(40px)'}
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(40px)' }
                 }
             },
             animation: {
@@ -37,8 +41,4 @@ export default {
         }
     },
     plugins: [forms, typography],
-    content: [
-        './index.html',
-        './src/**/*.{html,vue,js,ts,jsx,tsx}'
-    ],
 };
