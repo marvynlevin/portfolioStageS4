@@ -229,7 +229,7 @@
       ></div>
     </div>
 
-    <div class="flex flex-col mt-24">
+    <div class="flex flex-col mt-12 sm:mt-24">
       <ScrollFadeInComponent>
         <div class="flex flex-col md:flex-row items-center md:gap-12 px-[8%] sm:px-[15%]">
           <p class="pt-10 pb-10 font-normal text-espresso font-playfair text-justify text-14-15-18-22">
@@ -239,7 +239,7 @@
             <strong>évolutives</strong> et
             <strong>orientées métier</strong>.
           </p>
-          <img class="sm:w-[225px] lg:w-[300px] h-auto" src="@/assets/img/firstCompany.png"
+          <img class="w-[220px] sm:w-[225px] lg:w-[300px] h-auto" src="@/assets/img/firstCompany.png"
                alt="Illustration représentant une équie soudée">
         </div>
       </ScrollFadeInComponent>
@@ -255,7 +255,7 @@
       </ScrollFadeInComponent>
       <ScrollFadeInComponent>
         <div class="flex flex-col md:flex-row items-center md:gap-12 px-[8%] sm:px-[15%]">
-          <img class="sm:w-[240px] lg:w-[300px] h-auto py-12 md:py-24" src="@/assets/img/secondCompany.png"
+          <img class="w-[250px] sm:w-[240px] lg:w-[300px] h-auto py-12 md:py-24" src="@/assets/img/secondCompany.png"
                alt="Illustration représentant une équie soudée">
           <p class="pt-10 pb-10 font-normal text-espresso font-playfair text-justify text-14-15-18-22">
             <span class="text-18-19-24-30 font-black italic">0.3 Avec une culture</span>
