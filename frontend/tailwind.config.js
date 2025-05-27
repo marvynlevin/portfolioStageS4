@@ -7,6 +7,7 @@ module.exports = {
         './src/**/*.{html,vue,js,ts,jsx,tsx,css}'
     ],
     safelist: [
+        'hover:text-espresso',
         'text-espresso',
         'bg-espresso',
         'text-vanilla',
