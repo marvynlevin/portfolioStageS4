@@ -52,11 +52,9 @@ body {
   font-size: 22px;
 }
 
-/* Scrollbar */
-
 ::-webkit-scrollbar {
   width: 12px;
-  background-color: #FFF3E2; /* vanilla */
+  background-color: #FFF3E2;
 }
 
 ::-webkit-scrollbar-track {
@@ -68,13 +66,13 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 7px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  background-color: #BEAAAA; /* blush */
+  background-color: #BEAAAA;
 }
 
 @-moz-document url-prefix() {
   * {
     scrollbar-width: thin;
-    scrollbar-color: #3C2821 #F3E8D8; /* espresso + linen */
+    scrollbar-color: #3C2821 #F3E8D8;
   }
 }
 

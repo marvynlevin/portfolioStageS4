@@ -20,13 +20,6 @@
           :width="width"
           :height="height"
       />
-      <div
-          class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
-          :class="centerTextClass"
-      >
-        <span :class="titleClass">Total</span>
-        <span :class="percentClass">{{ total }} %</span>
-      </div>
 
       <!-- Légende en dessous -->
       <div class="flex justify-around w-[70vw] sm:w-[30vw] mt-4">
@@ -115,29 +108,55 @@ export default {
     },
   },
   computed: {
-    computedChartOptions() {
-      return {
-        chart: {
-          type: "radialBar",
-          sparkline: {enabled: true},
-        },
-        plotOptions: {
-          radialBar: {
-            hollow: {
-              size: "35%",
-            },
-            track: {
-              background: "#f1e8d9",
-            },
-            dataLabels: {
-              show: false,
-            },
-          },
-        },
-        labels: this.labels,
-        colors: this.colors,
-      };
+computedChartOptions() {
+  return {
+    chart: {
+      type: "radialBar",
     },
+    plotOptions: {
+      radialBar: {
+        hollow: {
+          size: '45%',
+        },
+        track: {
+          background: '#f1e8d9',
+        },
+        stroke: {
+          lineCap: 'round',
+          width: 50,
+        },
+        dataLabels: {
+          show: true,
+          name: {
+            show: true,
+            fontSize: '20px',
+            fontWeight: 900,
+            offsetY: -10,
+            fontFamily: 'Playfair Display, serif',
+          },
+          value: {
+            show: true,
+            fontSize: '20px',
+            fontWeight: 900,
+            offsetY: 10,
+            fontFamily: 'Playfair Display, serif',
+            formatter: () => `${this.total} %`
+          },
+          total: {
+            show: true,
+            label: 'Total',
+            fontSize: '20px',
+            fontWeight: 900,
+            fontFamily: 'Playfair Display, serif',
+            formatter: () => `${this.total} %`
+          }
+        }
+      }
+    },
+    labels: this.labels,
+    colors: this.colors,
+  };
+}
   },
 };
 </script>

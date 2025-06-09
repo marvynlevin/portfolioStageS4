@@ -35,13 +35,13 @@
     <teleport to="body">
       <div
           v-if="isMounted"
-          class="fixed top-0 left-0 h-full w-[100vw] sm:w-[80vw] bg-vanilla z-[99999] shadow-lg"
+          class="fixed top-0 left-0 h-full w-[100vw] sm:w-[80vw] bg-vanilla z-[9999] shadow-lg"
           :class="animationClass"
           @animationend="handleAnimationEnd"
       >
         <div class="p-6">
           <h2 class="text-18-19-24-30 font-bold mb-4 text-espresso">{{ title }} - Détails</h2>
-          <p class="text-espresso text-justify pr-6 text-14-15-16-20 whitespace-pre-line max-h-[80vh] overflow-y-auto ml-6"
+          <p class="text-espresso text-justify pr-6 text-14-15-16-20 whitespace-pre-line max-h-[80vh] overflow-y-auto ml-6 pb-6"
              v-html="longText">
           </p>
         </div>

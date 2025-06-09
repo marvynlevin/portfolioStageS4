@@ -1,8 +1,7 @@
 <template>
-
   <!--Haut de page-->
   <section
-      class="overflow_hidden sm:p-16 pt-[20vh] mb-[30vh] sm:mb-[30vh] sm:pt-[25vh] md:pt-[20vh] lg:pt-[15vh] xl:pt-[17vh] 2xl:pt-[22vh] md:h-screen">
+      class="overflow_hidden sm:p-16 pt-[20vh] mb-[30vh] sm:mb-[30vh] sm:pt-[25vh] md:pt-[20vh] lg:pt-[12vh] xl:pt-[13vh] 2xl:pt-[22vh] md:h-screen">
     <div class="relative group">
       <p
           class="relative text-35-50-60-80 text-espresso font-playfair
@@ -198,7 +197,7 @@
         </p>
 
         <div class="flex justify-end pr-10 mt-2 sm:mt-0">
-          <a href="https://akoladsolutions.com" class="cursor-pointer">
+          <a href="https://akoladsolutions.com" target="_blank" class="cursor-pointer">
             <button class="btn-espresso floatY">
               <i class="bi bi-link-45deg text-17-18-21-25"></i>
               <p class="text-12-13-16-20">Lien vers le site web</p>
@@ -411,24 +410,34 @@
     <FigureSliderComponent
         :figures="[
     {
-      src: 'figure1_Modele Logique-de-Donnees-MLD.png',
-      alt: `Modèle Logique de Données (MLD)`,
-      caption: `Figure 1 : Modèle Logique de Données (MLD)`,
-    },
-    {
       src: 'figure10_charte-raphique-Akosave.png',
       alt: `Charte graphique de Akosave`,
-      caption: `Figure 10 : Charte graphique de Akosave`,
+      caption: `Figure 1 : Charte graphique de Akosave`,
     },
     {
       src: 'figure13_tinyMCE-raport.png',
       alt: `Extrait du site utilisant l'éditeur riche Tiny MCE`,
-      caption: `Figure 13 : Extrait du site utilisant l'éditeur riche Tiny MCE`,
+      caption: `Figure 2 : Extrait du site utilisant l'éditeur riche Tiny MCE`,
+    },
+    {
+      src: 'figure14_lignes-raport.png',
+      alt: `Extrait du site utilisant les lignes de rapport`,
+      caption: `Figure 3 : Extrait du site utilisant les lignes de rapport`,
     },
     {
       src: 'figure14_mail-envoye.png',
       alt: `Extrait d'un envoi de mail`,
-      caption: `Figure 14 : Extrait d'un envoi de mail`,
+      caption: `Figure 4 : Extrait d'un envoi de mail`,
+    },
+    {
+      src: 'figure12_extrait-maquettes.png',
+      alt: `Extrait des maquettes Figma`,
+      caption: `Figure 5 : Extrait des maquettes Figma`,
+    },
+    {
+      src: 'figure15_routage.png',
+      alt: `Extrait de routages Symfony 7`,
+      caption: `Figure 6 : Extrait de routages Symfony 7`,
     },
   ]"
     />
@@ -443,14 +452,14 @@
       <p class="text-14-15-16-20 font-normal not-italic text-justify mb-2 md:mb-6">
         Lors de mon stage chez <strong>AKOLAD SOLUTIONS</strong>, j'ai activement participé à l'élaboration des
         spécifications pour l'<strong>évolution de l'application AKOSAVE</strong>. Cela a notamment impliqué de
-        <strong>comprendre les besoins</strong> liés à la gestion des maintenances, des tickets, et des utilisateurs/
-        projets. J'ai travaillé sur la <strong>formalisation du modèle de données</strong>
+        <strong>comprendre les besoins</strong> liés à la gestion des maintenances, des tickets, et des
+        utilisateurs/projets. J'ai travaillé sur la <strong>formalisation du modèle de données</strong>
         en comparant un brouillon existant avec l'équipe et en réalisant un Modèle Logique de Données (MLD) complet,
         incluant les nouvelles entités pour <strong>la gestion des maintenances et des tickets</strong>. Ce MLD a été
         revu et modifié.
         J'ai également <strong>conçu les interfaces utilisateur</strong> en créant des maquettes sur Figma, basées sur
         la charte
-        graphique de l'application existante (<strong>Figure 10</strong>). Ces maquettes ont été ajustées suite aux
+        graphique de l'application existante (<strong>Figure 1</strong>). Ces maquettes ont été ajustées suite aux
         retours de l'équipe
         pour affiner l'ergonomie et les workflows (est la représentation
         d'une suite de tâches ou d'opérations effectuées par une personne),
@@ -458,7 +467,7 @@
         majeur a été la création du
         système de rapports, passant d'une approche avec un <strong>éditeur riche (TinyMCE)</strong> à une structure
         basée sur de
-        nouvelles entités (ReportLine, ReportType, RecurrentLine) (<strong>Figure 13</strong>).
+        nouvelles entités (ReportLine, ReportType, RecurrentLine) (<strong>Figure 2 & 3</strong>).
 
         <br><br>
 
@@ -471,7 +480,7 @@
         <strong>la suppression</strong> (opérations CRUD) des données correspondantes. J'ai également mis en place des
         fonctionnalités
         spécifiques comme la gestion des relations complexes entre entités (Projet ↔ User), la logique des
-        statuts de ticket, ou encore la génération et l'envoi de rapports PDF par email (<strong>Figure 14</strong>).
+        statuts de ticket, ou encore la génération et l'envoi de rapports PDF par email (<strong>Figure 4</strong>).
 
         <br><br>
 
@@ -496,7 +505,7 @@
       </ul>
       <p class="text-14-15-16-20 font-normal not-italic text-justify mb-2 md:mb-6">
         L'application des principes d'ergonomie a été une composante importante de mon travail, notamment à travers la
-        <strong>conception des maquettes sur Figma</strong> (<strong>Figure 12</strong>). J'ai <strong>créé des
+        <strong>conception des maquettes sur Figma</strong> (<strong>Figure 5</strong>). J'ai <strong>créé des
         prototypes interactifs pour présenter les
         nouvelles pages</strong> à l'équipe et recevoir des validations. Les retours de Jérôme VARINI et Emmanuel
         BERTRON ont
@@ -559,7 +568,7 @@
         Sur le plan de la programmation, j'ai adopté les normes du Framework Symfony que j'ai appris en formation et
         auprès de l'équipe. J'ai <strong>refactorisé l'intégralité des routages</strong> pour utiliser les annotations
         modernes
-        #[Route()] (<strong>Figure 15</strong>). J'ai <strong>uniformisé l'indentation et les constructeurs</strong>
+        #[Route()] (<strong>Figure 6</strong>). J'ai <strong>uniformisé l'indentation et les constructeurs</strong>
         dans les contrôleurs pour améliorer
         la maintenabilité du code. L'<strong>utilisation de la méthode path() au lieu d'URLs codées en dur</strong> dans
         les templates
@@ -683,47 +692,47 @@
     {
       src: 'figure1_Modele Logique-de-Donnees-MLD.png',
       alt: `Modèle Logique de Données (MLD)`,
-      caption: `Figure 1 : Modèle Logique de Données (MLD)`,
+      caption: `Figure 7 : Modèle Logique de Données (MLD)`,
     },
     {
       src: 'figure2_page-du-site.png',
       alt: `Extrait page résolution de ticket`,
-      caption: `Figure 2 : Extrait page résolution de ticket (administrateur)`,
+      caption: `Figure 8 : Extrait page résolution de ticket (administrateur)`,
     },
     {
       src: 'figure5_securisation-route-ticket.png',
       alt: `Extrait de code de sécurisation de route`,
-      caption: `Figure 5 : Extrait de code de sécurisation de route`,
+      caption: `Figure 9 : Extrait de code de sécurisation de route`,
     },
     {
       src: 'figure6_apercu-configuration-voter.png',
       alt: `Extrait de code pour la gestion des droits`,
-      caption: `Figure 6 : Extrait de code pour la gestion des droits`,
+      caption: `Figure 10 : Extrait de code pour la gestion des droits`,
     },
     {
       src: 'figure11_phpmyadmin-securisation.png',
       alt: `Extrait de phpMyAdmin pour les audits`,
-      caption: `Figure 11 : Extrait de phpMyAdmin pour les audits`,
+      caption: `Figure 10 : Extrait de phpMyAdmin pour les audits`,
     },
     {
       src: 'figure4_apercu-fonctionnalites-twig.png',
       alt: `Extrait des fonctionnalités ajoutés par Twig`,
-      caption: `Figure 4 : Extrait des fonctionnalités ajoutés par Twig`,
+      caption: `Figure 12 : Extrait des fonctionnalités ajoutés par Twig`,
     },
     {
       src: 'figure7_page-client-raport.png',
       alt: `Extrait de page rapport (client)`,
-      caption: `Figure 7 : Extrait de page rapport (client)`,
-    },
-    {
-      src: 'figure8_raport-format-pdf.png',
-      alt: `Extrait d'un rapport au format PDF`,
-      caption: `Figure 8 : Extrait d'un rapport au format PDF`,
+      caption: `Figure 13 : Extrait de page rapport (client)`,
     },
     {
       src: 'figure9_page-administrateur-raport.png',
       alt: `Extrait de page rapport (administrateur)`,
-      caption: `Figure 9 : Extrait de page rapport (administrateur)`,
+      caption: `Figure 14 : Extrait de page rapport (administrateur)`,
+    },
+    {
+      src: 'figure8_raport-format-pdf.png',
+      alt: `Extrait d'un rapport au format PDF`,
+      caption: `Figure 15 : Extrait d'un rapport au format PDF`,
     },
   ]"
     />
@@ -737,7 +746,7 @@
         J'ai travaillé à partir d'un <strong>brouillon de Modèle Logique de Données (MLD)</strong> existant, je l'ai
         comparé avec l'équipe et j'ai réalisé un <strong>MLD complet</strong> intégrant les <strong>nouvelles entités
         nécessaires</strong> à la gestion des contrats de maintenance et tickets clients. Ce MLD a fait l'objet de
-        <strong>revues et de modifications</strong> (<strong>Figure 1</strong>). J'ai créé ces nouvelles entités
+        <strong>revues et de modifications</strong> (<strong>Figure 7</strong>). J'ai créé ces nouvelles entités
         (ContractMaintenance, Report, Ticket, Resolution, ReportLine, ReportType, RecurrentLine) en
         utilisant <strong>Doctrine ORM</strong>.
 
@@ -749,7 +758,7 @@
         l'historique</strong> des données.
 
         Pour <strong>améliorer la traçabilité</strong> et permettre un <strong>tri fiable</strong>, j'ai ajouté les
-        champs createdAt/By et updatedAt/By aux entités (<strong>Figure 2</strong>).
+        champs createdAt/By et updatedAt/By aux entités (<strong>Figure 8</strong>).
         J'ai <strong>géré un problème de compatibilité</strong> entre Doctrine et MariaDB qui a nécessité une <strong>migration
         vers MySQL</strong>, impliquant l'adaptation de la base. J'ai également utilisé le <strong>composant
         Validator de Symfony</strong> pour assurer la validité des données saisies dans les formulaires
@@ -781,10 +790,10 @@
         <li>AC2 : Assurer la confidentialité des données (intégrité et sécurité)</li>
       </ul>
       <p class="text-14-15-16-20 font-normal not-italic text-justify mb-2 md:mb-6">
-        J'ai mis en place la <strong>gestion des permissions d'accès</strong> (<strong>Figure 5</strong>) aux
+        J'ai mis en place la <strong>gestion des permissions d'accès</strong> (<strong>Figure 9</strong>) aux
         différentes ressources de l'application. J'ai utilisé un <strong>Voter Symfony</strong> pour définir des
         <strong>règles d'accès granulaires</strong> basées sur les rôles des utilisateurs (comme
-        CAN_ACCESS, CAN_READ, CAN_EDIT, CAN_DO_ALL) (<strong>Figure 6</strong>). J'ai vérifié et
+        CAN_ACCESS, CAN_READ, CAN_EDIT, CAN_DO_ALL) (<strong>Figure 10</strong>). J'ai vérifié et
         configuré les <strong>droits spécifiques</strong> pour les profils utilisateurs et administrateurs.
 
         Cela a impliqué de <strong>filtrer l'affichage des données</strong> et de restreindre les actions (modification,
@@ -830,7 +839,7 @@
         données dans l'application. J’ai créé les <strong>interfaces pour les opérations CRUD</strong> (affichage,
         ajout, modification, suppression). J’ai amélioré la visualisation des données en ajoutant des <strong>barres de
         recherche dynamiques</strong> dans presque tous les modules, et une <strong>fonction de copie</strong> de champs
-        vers le presse-papier (<strong>Figure 4</strong>).
+        vers le presse-papier (<strong>Figure 12</strong>).
 
         J’ai stylisé divers éléments comme les <strong>badges</strong> et les <strong>barres de défilement</strong> pour
         renforcer l’harmonie visuelle avec le site existant. J’ai rencontré un <strong>problème d’affichage de
@@ -843,7 +852,8 @@
 
         Les champs <strong>createdAt/By</strong> et <strong>updatedAt/By</strong> sont utilisés pour <strong>ordonnancer
         les données</strong> dans les tableaux, facilitant leur consultation. L’<strong>affichage et les
-        actions</strong> sont <strong>filtrés selon les droits</strong> de l’utilisateur (<strong>Figure 7 & 9</strong>).
+        actions</strong> sont <strong>filtrés selon les droits</strong> de l’utilisateur (<strong>Figure 13 &
+        14</strong>).
 
         <br><br>
 
@@ -866,13 +876,13 @@
       <p class="text-14-15-16-20 font-normal not-italic text-justify mb-2 md:mb-6">
         J'ai manipulé des <strong>données provenant de la base</strong> via l'<strong>ORM Doctrine</strong>, les rendant
         disponibles dans l'application. J'ai géré les <strong>données saisies par l'utilisateur</strong> via les
-        <strong>formulaires Symfony</strong>, en assurant leur validation, et en appliquant, dans certains cas (comme
-        pour les prix/centimes), des <strong>transformations de données</strong> entre la base et l'affichage.
+        <strong>formulaires Symfony</strong>, en assurant leur validation, et en appliquant, dans certains cas, des
+        <strong>transformations de données</strong> entre la base et l'affichage.
 
         J'ai travaillé avec des <strong>fichiers uploadés</strong> (pièces jointes), en gérant leur <strong>stockage
         sécurisé</strong> et leur affichage. Pour la <strong>génération de rapports</strong>, j'ai transformé des
         <strong>données structurées</strong> (entités ReportLine, Report) en HTML, puis en <strong>PDF via
-        canvas2pdf</strong> (<strong>Figure 8</strong>), impliquant un passage entre <strong>plusieurs formats</strong>
+        canvas2pdf</strong> (<strong>Figure 15</strong>), impliquant un passage entre <strong>plusieurs formats</strong>
         de représentation.
 
         J'ai également intégré des <strong>données de différents modules</strong> en créant des <strong>relations entre
