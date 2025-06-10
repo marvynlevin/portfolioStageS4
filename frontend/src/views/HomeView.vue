@@ -948,7 +948,7 @@ export default {
         },
         {
           name: 'keywords',
-          content: 'portfolio, stage, informatique, développement, Akolad Solutions, Symfony, Vue.js'
+          content: 'portfolio, stage, informatique, développement, Akolad Solutions, Symfony, Doctrine, Twig'
         },
         {
           property: 'og:title',
@@ -968,7 +968,7 @@ export default {
         },
         {
           property: 'og:image',
-          content: 'https://marvynlevin.fr/src/assets/img/me.png'
+          content: 'https://www.marvynlevin.fr/assets/me-CvoEOfgM.png'
         },
         {
           name: 'twitter:card',
@@ -984,7 +984,7 @@ export default {
         },
         {
           name: 'twitter:image',
-          content: 'https://marvynlevin.fr/src/assets/img/me.png'
+          content: 'https://www.marvynlevin.fr/assets/me-CvoEOfgM.png'
         }
       ]
     })
