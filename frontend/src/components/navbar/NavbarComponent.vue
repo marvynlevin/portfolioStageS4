@@ -124,7 +124,10 @@
       </router-link>
 
       <div class="flex flex-row gap-4 mt-auto">
-        <a href="https://github.com/marvynlevin">
+        <a href="https://github.com/marvynlevin"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Profil GitHub de Marvyn Levin (nouvelle fenêtre)">
           <svg class="color-espresso cursor-pointer hover:text-dusk w-[55px] h-auto" viewBox="0 0 80 80" fill="none"
                xmlns="http://www.w3.org/2000/svg">
             <path opacity="0.994" fill-rule="evenodd" clip-rule="evenodd"
@@ -133,7 +136,10 @@
           </svg>
         </a>
 
-        <a href="https://www.linkedin.com/in/marvyn-levin-b96332325/">
+        <a href="https://www.linkedin.com/in/marvyn-levin-b96332325/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Profil Linkedin de Marvyn Levin (nouvelle fenêtre)">
           <svg class="color-espresso cursor-pointer hover:text-dusk w-[55px] h-auto" viewBox="0 0 80 80" fill="none"
                xmlns="http://www.w3.org/2000/svg">
             <path opacity="0.994" fill-rule="evenodd" clip-rule="evenodd"
@@ -144,7 +150,7 @@
 
       </div>
 
-      <p class="mt-[10px] text-18-19-24-30 italic opacity-40">© 2025 - Tous droits réservés </p>
+      <p class="mt-[10px] text-17-18-21-25 italic opacity-40">© 2025 - Tous droits réservés </p>
 
     </div>
 

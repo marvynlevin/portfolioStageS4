@@ -207,7 +207,6 @@
       </div>
     </div>
 
-
     <div
         class="relative group mt-20 pt-12 sm:mt-36 sm:pt-24 px-[8%] sm:px-[15%] font-normal text-espresso font-playfair text-justify text-14-15-18-22">
       <div class="relative z-10">
@@ -330,7 +329,6 @@
       ]"
           :active="true"
       />
-
       <FeatureCardComponent
           title="Gestion des tickets clients"
           longText="
@@ -355,7 +353,6 @@
       ]"
           :active="true"
       />
-
       <FeatureCardComponent
           title="Gestion des modules de projet"
           icon="moduleIcon.svg"
@@ -937,9 +934,61 @@ import FigureSliderComponent from "@/components/animations/FigureSliderComponent
 import ScrollFadeInComponent from "@/components/animations/ScrollFadeInComponent.vue";
 import VueApexCharts from "vue3-apexcharts";
 import CompetenceChartComponent from "@/components/charts/CompetenceChartComponent.vue";
+import {useHead} from '@vueuse/head'
 
 export default {
   name: 'HomeView',
+  setup() {
+    useHead({
+      title: 'Marvyn Levin - Portfolio de Stage',
+      meta: [
+        {
+          name: 'description',
+          content: 'Portfolio de stage de Marvyn Levin, étudiant en BUT Informatique, présentant ses compétences et projets réalisés chez Akolad Solutions.'
+        },
+        {
+          name: 'keywords',
+          content: 'portfolio, stage, informatique, développement, Akolad Solutions, Symfony, Vue.js'
+        },
+        {
+          property: 'og:title',
+          content: 'Marvyn Levin - Portfolio de Stage'
+        },
+        {
+          property: 'og:description',
+          content: 'Découvrez mon portfolio de stage en développement web chez Akolad Solutions.'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          property: 'og:url',
+          content: 'https://marvynlevin.fr'
+        },
+        {
+          property: 'og:image',
+          content: 'https://marvynlevin.fr/src/assets/img/me.png'
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary_large_image'
+        },
+        {
+          name: 'twitter:title',
+          content: 'Marvyn Levin - Portfolio de Stage'
+        },
+        {
+          name: 'twitter:description',
+          content: 'Portfolio de stage en développement web.'
+        },
+        {
+          name: 'twitter:image',
+          content: 'https://marvynlevin.fr/src/assets/img/me.png'
+        }
+      ]
+    })
+  },
   components: {
     FigureSliderComponent,
     CompetenceChartComponent,

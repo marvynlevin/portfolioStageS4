@@ -8,7 +8,10 @@
       <div class="w-[100vw] md:w-[20vw] flex flex-row gap-4 justify-center mb-10 sm:mb-0 sm:justify-end">
 
         <div class="flex flex-row sm:flex-col lg:flex-row gap-4">
-          <a href="https://github.com/marvynlevin" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/marvynlevin"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Profil Github de Marvyn Levin (nouvelle fenêtre)">
             <svg
                 class="w-[50px] md:w-[60px] h-auto text-black cursor-pointer hover:text-dusk hover:-translate-y-1 transition-transform duration-200"
                 width="60" height="60" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +21,10 @@
             </svg>
           </a>
 
-          <a href="mailto:marvyn.levin25460@gmail.com">
+          <a href="mailto:marvyn.levin25460@gmail.com"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Envoyer un email à Marvyn Levin (nouvelle fenêtre)">
             <svg
                 class="w-[50px] md:w-[60px] h-auto text-black cursor-pointer hover:text-dusk hover:-translate-y-1 transition-transform duration-200"
                 width="60" height="60" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +45,10 @@
           </a>
         </div>
         <div class="flex flex-row sm:flex-col lg:flex-row gap-4">
-          <a href="https://www.linkedin.com/in/marvyn-levin-b96332325/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/marvyn-levin-b96332325/"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Profil Linkedin de Marvyn Levin (nouvelle fenêtre)">
             <svg
                 class="w-[50px] md:w-[60px] h-auto text-black cursor-pointer hover:text-dusk hover:-translate-y-1 transition-transform duration-200"
                 width="60" height="60" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +58,10 @@
             </svg>
           </a>
 
-          <a href="tel:0781885196">
+          <a href="tel:0781885196"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Appeler Marvyn Levin au 07 81 88 51 96">
             <svg
                 class="w-[50px] md:w-[60px] h-auto text-black cursor-pointer hover:text-dusk hover:-translate-y-1 transition-transform duration-200"
                 width="60" height="60" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
