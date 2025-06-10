@@ -964,7 +964,7 @@ export default {
         },
         {
           property: 'og:url',
-          content: 'https://marvynlevin.fr'
+          content: 'https://www.marvynlevin.fr'
         },
         {
           property: 'og:image',
