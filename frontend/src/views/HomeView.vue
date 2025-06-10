@@ -968,7 +968,7 @@ export default {
         },
         {
           property: 'og:image',
-          content: 'https://www.marvynlevin.fr/assets/me-CvoEOfgM.png'
+          content: 'https://www.marvynlevin.fr/icon.png'
         },
         {
           name: 'twitter:card',
@@ -984,7 +984,7 @@ export default {
         },
         {
           name: 'twitter:image',
-          content: 'https://www.marvynlevin.fr/assets/me-CvoEOfgM.png'
+          content: 'https://www.marvynlevin.fr/icon.png'
         }
       ]
     })
