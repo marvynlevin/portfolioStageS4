@@ -1,14 +1,11 @@
 <template>
-  <div class="bg-vanilla h-full">
+  <div class="bg-vanilla bg-noise h-full">
     <div v-if="!appReady" class="fixed inset-0 bg-vanilla z-[99999]"></div>
 
-    <NavbarComponent v-if="appReady"/>
     <CustomCursorComponent v-if="appReady"/>
     <ScrollToTopComponent v-if="appReady"/>
 
     <router-view v-if="appReady"/>
-
-    <FooterComponent v-if="appReady"/>
   </div>
 </template>
 
@@ -24,7 +21,7 @@ export default {
   components: {
     ScrollToTopComponent,
     CustomCursorComponent,
-    NavbarComponent,
+    NavbarStageComponent: NavbarComponent,
     FooterComponent,
   },
   setup() {
@@ -54,13 +51,13 @@ body {
 
 ::-webkit-scrollbar {
   width: 12px;
-  background-color: #FFF3E2;
+  background-color: rgba(255, 243, 226, 0.3);
 }
 
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   border-radius: 7px;
-  background-color: #FFF3E2;
+   background-color: #FFF3E299;
 }
 
 ::-webkit-scrollbar-thumb {

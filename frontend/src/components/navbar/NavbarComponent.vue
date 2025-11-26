@@ -1,6 +1,6 @@
 <template>
   <!--scale > 1024px-->
-  <nav class="hidden sm:flex justify-center sm:space-x-9  md:space-x-16 lg:space-x-28 py-6 relative">
+  <nav class="hidden sm:flex justify-center sm:space-x-9 md:space-x-16 lg:space-x-28 py-6 relative">
     <div
         v-for="item in navItems"
         :key="item.name"
@@ -65,7 +65,7 @@
       ref="animatedDiv"
       id="animatedDiv"
       :class="[
-      'origin-top m-0 py-6 bg-vanilla sm:hidden justify-center sm:space-x-9 overflow-x-hidden',
+      'origin-top m-0 py-6 bg-vanilla bg-noise sm:hidden justify-center sm:space-x-9 overflow-x-hidden',
       isVisible ? 'flex h-[100vh]' : 'hidden',
       animationClass
     ]"
