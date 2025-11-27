@@ -77,7 +77,6 @@ import ScrollFadeInComponent from "@/components/animations/ScrollFadeInComponent
 import VueApexCharts from "vue3-apexcharts";
 import CompetenceChartComponent from "@/components/charts/CompetenceChartComponent.vue";
 import {useHead} from '@vueuse/head'
-import NavbarStageComponent from "@/components/navbar/NavbarComponent.vue";
 
 export default {
   name: 'HomeView',
@@ -133,7 +132,6 @@ export default {
     })
   },
   components: {
-    NavbarStageComponent,
     FigureSliderComponent,
     CompetenceChartComponent,
     ScrollFadeInComponent,

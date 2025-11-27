@@ -5,7 +5,7 @@
       class="text-espresso pt-12 sm:pt-24 px-[8%] sm:px-[15%] rounded-xl space-y-3 md:space-y-6"
   >
 
-    <h2 class="text-18-19-24-30 font-playfair font-black italic">
+    <h2 class="text-18-19-24-30 font-playfair font-black">
       Formulaire de contact
     </h2>
 
@@ -20,7 +20,7 @@
             name="prenom"
             required
             placeholder="Entrez votre prénom"
-            class="px-4 py-2 rounded-lg bg-transparent border border-espresso/30 focus:border-espresso/60 outline-none"
+            class="px-4 py-2 text-14-15-18-22 rounded-lg placeholder-blush bg-transparent border border-espresso/30 focus:border-espresso/60 outline-none"
         >
       </div>
 
@@ -32,7 +32,7 @@
             name="nom"
             required
             placeholder="Entrez votre nom"
-            class="px-4 py-2 rounded-lg bg-transparent border border-espresso/30 focus:border-espresso/60 outline-none"
+            class="px-4 py-2 text-14-15-18-22 rounded-lg placeholder-blush bg-transparent border border-espresso/30 focus:border-espresso/60 outline-none"
         >
       </div>
 
@@ -49,7 +49,7 @@
             name="email"
             required
             placeholder="nom.prenom@exemple.com"
-            class="px-4 py-2 rounded-lg bg-transparent border border-espresso/30 focus:border-espresso/60 outline-none"
+            class="px-4 py-2 text-14-15-18-22 rounded-lg placeholder-blush bg-transparent border border-espresso/30 focus:border-espresso/60 outline-none"
         >
       </div>
 
@@ -60,7 +60,7 @@
             type="tel"
             name="telephone"
             placeholder="06 00 00 00 00"
-            class="px-4 py-2 rounded-lg bg-transparent border border-espresso/30 focus:border-espresso/60 outline-none"
+            class="px-4 py-2 text-14-15-18-22 rounded-lg placeholder-blush bg-transparent border border-espresso/30 focus:border-espresso/60 outline-none"
         >
       </div>
 
@@ -74,7 +74,7 @@
           required
           rows="5"
           placeholder="Je vous envoie un message pour parler de ..."
-          class="px-4 py-3 rounded-lg bg-transparent border border-espresso/30 focus:border-espresso/60 outline-none resize-none"
+          class="px-4 py-3 text-14-15-18-22 rounded-lg placeholder-blush bg-transparent border border-espresso/30 focus:border-espresso/60 outline-none resize-none"
       ></textarea>
     </div>
 
@@ -96,7 +96,7 @@
     <!-- Bouton -->
     <button
         type="submit"
-        class="mt-2 px-6 py-3 bg-espresso text-vanilla rounded-lg font-semibold flex items-center gap-2 hover:bg-dusk transition shadow-sm"
+        class="btn-espresso hover:bg-noise cursor-pointer"
     >
       <i class="bi bi-check2-circle text-17-18-21-25"></i>
       <p class="text-12-13-16-20">Envoyer le formulaire</p>

@@ -100,27 +100,35 @@
 
       <router-link
           @click="unsetScale"
-          :to="{ name: 'home', hash: '#' + 'presentation' }">
+          :to="{ name: 'stage', hash: '#' + 'presentation' }">
       <span
-          class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-1 -mb-10">Présentation</span>
+          class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-1 -mb-10">
+        Présentation
+      </span>
       </router-link>
       <router-link
           @click="unsetScale"
-          :to="{ name: 'home', hash: '#' + 'entreprise' }">
+          :to="{ name: 'stage', hash: '#' + 'entreprise' }">
       <span
-          class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-2 -mb-10">Entreprise</span>
+          class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-2 -mb-10">
+        Entreprise
+      </span>
       </router-link>
       <router-link
           @click="unsetScale"
-          :to="{ name: 'home', hash: '#' + 'stage' }">
+          :to="{ name: 'stage', hash: '#' + 'stage' }">
   <span
-      class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-3 -mb-10">Stage</span>
+      class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-3 -mb-10">
+    Stage
+  </span>
       </router-link>
       <router-link
           @click="unsetScale"
-          :to="{ name: 'home', hash: '#' + 'competences' }">
+          :to="{ name: 'stage', hash: '#' + 'competences' }">
     <span
-        class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-4 -mb-10">Compétences</span>
+        class="overflow-hidden whitespace-nowrap w-full text-[80px] italic font-bold cursor-pointer hover:text-dusk float-x-anim-4 -mb-10">
+      Compétences
+    </span>
       </router-link>
 
       <div class="flex flex-row gap-4 mt-auto">
@@ -160,14 +168,14 @@
 
 <script>
 export default {
-  name: 'NavbarComponent',
+  name: 'NavbarStageComponent',
   data() {
     return {
       navItems: [
-        {name: 'Présentation', routeName: 'home', sectionId: 'presentation'},
-        {name: 'Entreprise', routeName: 'home', sectionId: 'entreprise'},
-        {name: 'Stage', routeName: 'home', sectionId: 'stage'},
-        {name: 'Compétences', routeName: 'home', sectionId: 'competences'},
+        {name: 'Présentation', routeName: 'stage', sectionId: 'presentation'},
+        {name: 'Entreprise', routeName: 'stage', sectionId: 'entreprise'},
+        {name: 'Stage', routeName: 'stage', sectionId: 'stage'},
+        {name: 'Compétences', routeName: 'stage', sectionId: 'competences'},
       ],
       isVisible: false,
       animationClass: '',

@@ -2,10 +2,8 @@ import {createRouter, createWebHistory} from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import PortfolioBookView from '../views/PortfolioBookView.vue';
 import PortfolioStageView from '../views/PortfolioStageView.vue';
-
-import Project24hMansView from '../views/projects/Project24hMansView.vue';
-import ProjectFireWatchView from "@/views/projects/ProjectFireWatchView.vue";
-import ProjectLevinEnergieView from "@/views/projects/ProjectLevinEnergieView.vue";
+import ProjectView from '../views/ProjectView.vue';
+import BlogView from '../views/BlogView.vue';
 
 const routes = [
     {path: '/', name: 'home', component: HomeView},
@@ -14,14 +12,14 @@ const routes = [
     {path: '/portfolio', name: 'portfolio', component: PortfolioBookView},
 
     // PROJETS
-    {path: '/portfolio/projets/24h-du-mans', name: '24hmans', component: Project24hMansView},
-    {path: '/portfolio/projets/firewatch', name: 'firewatch', component: ProjectFireWatchView},
-    {path: '/portfolio/projets/ets-levin-energie', name: 'levinenergie', component: ProjectLevinEnergieView},
+    {path: '/portfolio/projets/:slug', name: 'project', component: ProjectView},
 
     // RACINE PORTFOLIO STAGE
     {path: '/stage', name: 'stage', component: PortfolioStageView},
 
     // BLOGS
+    {path: '/portfolio/blogs/:slug', name: 'blog', component: BlogView},
+
 ];
 
 export default createRouter({

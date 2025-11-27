@@ -47,7 +47,7 @@ transform transition-transform duration-800 ease-out hover:scale-[1.02] hover:-r
         <span
             v-for="(tech, index) in technos"
             :key="index"
-            class="px-3 py-1 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
+            class="px-3 py-1 hover:bg-dusk hover:border-dusk transition-colors duration-300 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
         >
           {{ tech }}
         </span>
@@ -55,9 +55,9 @@ transform transition-transform duration-800 ease-out hover:scale-[1.02] hover:-r
 
       <!-- Bouton -->
       <div class="pt-4 md:pt-8 flex justify-center cursor-pointer">
-        <router-link :to="detailsLink" class="btn-espresso hover:bg-noise">
+        <router-link :to="{name: 'project', params: { slug: detailsLink }}" class="btn-espresso hover:bg-noise">
           <i class="bi bi-info-circle text-17-18-21-25"></i>
-          <p class="text-12-13-16-20">Portfolio Book</p>
+          <p class="text-12-13-16-20">Plus de détails</p>
         </router-link>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <!-- Barre de navigation -->
-  <NavbarStageComponent/>
+  <NavbarPortfolioComponent/>
 
   <!--Haut de page-->
   <section
@@ -167,7 +167,7 @@
     'Interfaces pensées pour être visuelles et opérationnelles',
   ]"
         :technos="['Vue.js', 'Tailwind', 'Leaflet', 'API Rest', 'Node.Js', 'Prisma', 'JavaScript']"
-        detailsLink="24hmans"
+        detailsLink="24h-du-mans"
         backgroundImage="/bg-24hmans.png"
     />
 
@@ -240,8 +240,8 @@
         </p>
 
         <div class="flex justify-end pr-10 mt-2 sm:mt-0">
-          <a href="https://akoladsolutions.com" target="_blank" class="cursor-pointer">
-            <button class="btn-espresso floatY">
+          <a href="https://github.com/marvynlevin?tab=repositories" target="_blank" class="cursor-pointer">
+            <button class="btn-espresso hover:bg-noise floatY">
               <i class="bi bi-link-45deg text-17-18-21-25"></i>
               <p class="text-12-13-16-20">Lien vers mon Github</p>
             </button>
@@ -252,7 +252,7 @@
 
   </section>
 
-  <!--Competences presentation-->
+  <!--Savoir-faire presentation-->
   <section id="competences" class="pb-40">
 
     <!--Titre-->
@@ -261,7 +261,7 @@
           class="relative text-[35px] sm:text-[45px] md:text-[60px] lg:text-[80px] text-espresso font-playfair
           font-black text-center italic -mb-4 z-10"
       >
-        Compétences
+        Savoir-faire
       </h1>
       <div
           class="absolute sm:bottom-[15px] md:bottom-[20px] lg:bottom-[26px] sm:left-[27%] md:left-[28%] lg:left-[32%] sm:w-[50%] md:w-[50%]
@@ -290,7 +290,7 @@
     </div>
 
     <!-- COMPETENCES WEB -->
-    <div class="flex flex-row px-[8%] sm:px-[15%] mt-20 mr-10">
+    <div class="flex flex-row px-[4%] sm:px-[15%] mt-20 mr-10">
       <img class="h-[80px] sm:h-[90px] md:h-[100px] lg:h-[145px] w-auto object-contain pb-auto mb-auto lg:mb-0 mr-10"
            src="/logo-pc.png"
            alt="Logo représentant un ordinateur"/>
@@ -302,17 +302,17 @@
           données.</p>
         <div class="flex flex-wrap gap-2 pt-5">
         <span
-            class="px-3 py-1 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
+            class="px-3 py-1 hover:bg-dusk hover:border-dusk transition-colors duration-300 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
         >
           VUE JS
         </span>
           <span
-              class="px-3 py-1 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
+              class="px-3 py-1 hover:bg-dusk hover:border-dusk transition-colors duration-300 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
           >
           SYMFONY
         </span>
           <span
-              class="px-3 py-1 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
+              class="px-3 py-1 hover:bg-dusk hover:border-dusk transition-colors duration-300 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
           >
           FLASK
         </span>
@@ -373,28 +373,29 @@
     </div>
 
     <!-- COMPETENCES MOBILE -->
-    <div class="flex flex-row px-[8%] sm:px-[15%] mt-40 mr-10">
+    <div class="flex flex-row px-[4%] sm:px-[15%] mt-40 mr-10">
       <img class="h-[80px] sm:h-[90px] md:h-[100px] lg:h-[145px] w-auto object-contain pb-auto mb-auto lg:mb-0 mr-10"
            src="/logo-mobile.png"
            alt="Logo représentant un ordinateur"/>
       <div>
-        <p><span class="font-black italic text-espresso font-playfair text-left text-18-19-24-30">Développement App
+        <p class="text-14-15-18-22"><span
+            class="font-black italic text-espresso font-playfair text-left text-18-19-24-30">Développement App
           Multi Device</span><br>
           Création d’applications performantes et intuitives, adaptées aux besoins des utilisateurs et aux contraintes
           techniques.</p>
         <div class="flex flex-wrap gap-2 pt-5">
         <span
-            class="px-3 py-1 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
+            class="px-3 py-1 hover:bg-dusk hover:border-dusk transition-colors duration-300 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
         >
           FLUTTER
         </span>
           <span
-              class="px-3 py-1 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
+              class="px-3 py-1 hover:bg-dusk hover:border-dusk transition-colors duration-300 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
           >
           SWIFT
         </span>
           <span
-              class="px-3 py-1 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
+              class="px-3 py-1 hover:bg-dusk hover:border-dusk transition-colors duration-300 text-vanilla bg-espresso rounded-full text-14-15-16-20 italic font-semibold border border-espresso"
           >
           KOTLIN
         </span>
@@ -494,7 +495,37 @@
 
     <FormContactComponent></FormContactComponent>
 
-        <!-- TODO : faut rajouter le CV + boutons de downlonad -->
+    <div class="px-[8%] sm:px-[15%]">
+      <h2 class="text-18-19-24-30 pt-10 sm:pt-20 pb-6 sm:pb-8 font-playfair font-black">
+        Mon Curriculum Vitae
+      </h2>
+
+      <div class="w-full">
+
+        <!-- Image du CV -->
+        <div class="flex justify-center">
+          <img
+              class="mb-4 sm:mb-8 h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-auto shadow-[1px_1px_22px_0_rgba(0,0,0,0.25)]"
+              src="/cv.png"
+              alt="Illustration de mon CV">
+        </div>
+
+        <div class="flex justify-start">
+          <a href="@/assets/files/Marvyn_LEVIN_cv.pdf"
+             download="Marvyn_LEVIN_cv.pdf"
+             class="cursor-pointer">
+            <button class="btn-espresso hover:bg-noise">
+              <i class="bi bi-patch-plus text-17-18-21-25"></i>
+              <p class="text-12-13-16-20">Curriculum Vitae</p>
+            </button>
+          </a>
+        </div>
+
+      </div>
+
+
+    </div>
+
 
   </section>
 
@@ -514,10 +545,32 @@
           lg:w-[41%] lg:h-6 md:h-5 h-4 bg-blush opacity-100 origin-left scale-x-100 transition-transform
           duration-700 ease-in-out z-0"
       ></div>
-
     </div>
 
-    <!-- TODO : faut faire un componant pour les cards des blogs et ensuite faire toutes les pages projets details et blogs details -->
+    <div class="px-[8%] sm:px-[15%] mt-14 sm:mt-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+      <BlogCardComponent
+          v-for="(b, i) in blogs"
+          :key="i"
+          :title="b.title"
+          :image="b.image"
+          :description="b.description"
+          :link="b.link"
+      />
+    </div>
+
+    <div class="flex mt-10 ml-[2%] sm:ml-[10%] md:ml-[20%] mr-auto w-auto gap-4">
+      <img class="h-[80px] sm:h-[90px] md:h-[100px] lg:h-[145px] w-auto mt-auto mb-auto lg:mb-0 pl-4 floatY"
+           src="@/assets/img/arrowTwo.png"
+           alt="Flèche qui pointe du texte au carousel"/>
+      <div class="flex flex-col justify-between">
+        <p class="pt-6 sm:pt-10 pl-[2%] sm:pl-[8%] pr-[10%] sm:pr-[12%] lg:pr-[15%] font-normal italic font-playfair text-justify text-12-13-16-20 floatY">
+      <span class="font-black text-espresso font-playfair text-justify text-14-15-18-22">
+        Je vous souhaite une bonne lecture </span> <br/>
+          et j’espère que ces blogs vous apporteront les réponses ou l’inspiration que vous recherchez.
+        </p>
+      </div>
+    </div>
+
 
   </section>
 
@@ -531,12 +584,13 @@
 <script>
 import FeatureCardComponent from "@/components/cards/FeatureCardComponent.vue";
 import ProjectCardComponent from "@/components/cards/ProjectCardComponent.vue"
+import BlogCardComponent from "@/components/cards/BlogCardComponent.vue";
 import FigureSliderComponent from "@/components/animations/FigureSliderComponent.vue";
 import ScrollFadeInComponent from "@/components/animations/ScrollFadeInComponent.vue";
 import VueApexCharts from "vue3-apexcharts";
 import CompetenceChartComponent from "@/components/charts/CompetenceChartComponent.vue";
 import {useHead} from '@vueuse/head'
-import NavbarStageComponent from "@/components/navbar/NavbarComponent.vue";
+import NavbarPortfolioComponent from "@/components/navbar/NavbarPortfolioComponent.vue";
 import FooterComponent from "@/components/footer/FooterComponent.vue";
 import FormContactComponent from "@/components/form/FormContactComponent.vue";
 
@@ -596,12 +650,13 @@ export default {
   components: {
     FormContactComponent,
     FooterComponent,
-    NavbarStageComponent,
+    NavbarPortfolioComponent,
     FigureSliderComponent,
     CompetenceChartComponent,
     ScrollFadeInComponent,
     FeatureCardComponent,
     ProjectCardComponent,
+    BlogCardComponent,
     apexchart: VueApexCharts,
   },
   data() {
@@ -617,6 +672,38 @@ export default {
       comp2: `PYTHON, PHP, NODEJS, MYSQL, MONGODB, API REST, GIT, DOCKER`,
       comp3: `DART, ANDROID, SWIFT, IOS, ANDROID STUDIO, XCODE`,
       comp4: `POSTRESQL, MONGODB, API REST, MVC, MVVM`,
+      blogs: [
+        {
+          title: "Agriculture Intelligente",
+          image: "/bg-agriculture-intelligente.png",
+          description: "« Robots, IA et data transforment l’agriculture, offrant des cultures plus durables, tout en facilitant le travail. »",
+          link: ""
+        },
+        {
+          title: "Découverte de Symfony",
+          image: "/bg-decouverte-symfony.png",
+          description: "« Symfony simplifie et accélère le développement web grâce à sa structure robuste, ses outils puissants et sa grande flexibilité. »",
+          link: ""
+        },
+        {
+          title: "Google MyBusiness",
+          image: "/bg-google-mybusiness.png",
+          description: "« Google MyBusiness aide les entreprises à gagner en visibilité locale, attirer plus de clients et optimiser leur présence en ligne. »",
+          link: ""
+        },
+        {
+          title: "Améliorer son SEO",
+          image: "/bg-seo.png",
+          description: "« Le SEO améliore le positionnement d’un site en optimisant contenu, structure et mots-clés pour attirer un trafic naturel durable. »",
+          link: "/blogs/article-1"
+        },
+        {
+          title: "Comparaison de BDD",
+          image: "/bg-bdd.png",
+          description: "« Chaque base de données a ses forces : performance, flexibilité ou sécurité ; bien choisir dépend des besoins du projet. »",
+          link: ""
+        }
+      ]
     }
   },
   computed: {

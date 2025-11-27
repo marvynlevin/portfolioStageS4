@@ -11,9 +11,7 @@
 
 <script>
 import {ref, onMounted} from 'vue'
-import NavbarComponent from './components/navbar/NavbarComponent.vue';
 import CustomCursorComponent from "@/components/cursor/CustomCursorComponent.vue";
-import FooterComponent from "@/components/footer/FooterComponent.vue";
 import ScrollToTopComponent from "@/components/elements/ScrollToTopComponent.vue";
 
 export default {
@@ -21,8 +19,6 @@ export default {
   components: {
     ScrollToTopComponent,
     CustomCursorComponent,
-    NavbarStageComponent: NavbarComponent,
-    FooterComponent,
   },
   setup() {
     const appReady = ref(false)
