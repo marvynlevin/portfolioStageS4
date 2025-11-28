@@ -511,7 +511,7 @@
         </div>
 
         <div class="flex justify-start">
-          <a href="@/assets/files/Marvyn_LEVIN_cv.pdf"
+          <a href="/files/Marvyn_LEVIN_cv.pdf"
              download="Marvyn_LEVIN_cv.pdf"
              class="cursor-pointer">
             <button class="btn-espresso hover:bg-noise">

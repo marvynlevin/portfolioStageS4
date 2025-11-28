@@ -1,5 +1,9 @@
 <template>
-  <a :href="url" target="_blank" class="btn-espresso w-xl">{{ text }}</a>
+  <a :href="url" target="_blank">
+    <button class="btn-espresso">
+      {{ text }}
+    </button>
+  </a>
 </template>
 
 <script setup>

@@ -53,7 +53,7 @@ body {
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   border-radius: 7px;
-   background-color: #FFF3E299;
+  background-color: #FFF3E299;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -177,6 +177,10 @@ html.is-loading, html.is-loading * {
   font-size: 45px;
 }
 
+.text-60-95-105-115 {
+  font-size: 60px;
+}
+
 @media (min-width: 640px) {
   .text-12-13-16-20 {
     font-size: 13px;
@@ -209,7 +213,12 @@ html.is-loading, html.is-loading * {
   .text-45-80-90-100 {
     font-size: 80px;
   }
+
+  .text-60-95-105-115 {
+    font-size: 95px;
+  }
 }
+
 
 @media (min-width: 768px) {
   .text-12-13-16-20 {
@@ -243,6 +252,10 @@ html.is-loading, html.is-loading * {
   .text-45-80-90-100 {
     font-size: 90px;
   }
+
+  .text-60-95-105-115 {
+  font-size: 105px;
+}
 }
 
 @media (min-width: 1024px) {
@@ -277,5 +290,9 @@ html.is-loading, html.is-loading * {
   .text-45-80-90-100 {
     font-size: 100px;
   }
+
+  .text-60-95-105-115 {
+  font-size: 140px;
+}
 }
 </style>
