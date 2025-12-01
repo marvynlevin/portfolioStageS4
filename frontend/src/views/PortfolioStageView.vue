@@ -2,6 +2,14 @@
   <!-- Barre de navigation -->
   <NavbarStageComponent/>
 
+  <!-- Bouton Home Page -->
+  <button
+      @click="goBack"
+      class="fixed bottom-4 cursor-pointer left-4 py-3 px-4.5 rounded-full bg-blush text-white hover:bg-dusk transition-all duration-300 shadow-lg hover:-translate-y-2 transition-transform duration-200 z-[40]"
+  >
+    <i class="bi bi-house text-[20px]"/>
+  </button>
+
   <!--Haut de page-->
   <section
       class="relative overflow_hidden sm:p-16 pt-[20vh] mb-[30vh] sm:mb-[30vh] sm:pt-[25vh] md:pt-[20vh] lg:pt-[12vh] xl:pt-[13vh] 2xl:pt-[22vh] md:h-screen">
@@ -1023,6 +1031,9 @@ NATUREL RESPONSIVE DESIGN INNOVATION TRANSPARENCE PARTENARIAT DURABLE`,
     }
   },
   methods: {
+    goBack() {
+      this.$router.push({name: 'home'})
+    },
     scrollToNextSection() {
       const nextSection = document.getElementById('presentation')
       if (nextSection) {

@@ -32,7 +32,7 @@
 
       <!-- Bouton lire + -->
       <div class="pt-2 flex justify-center">
-        <router-link :to="link" class="btn-espresso hover:bg-noise">
+        <router-link :to="{name: 'blog', params: { slug: detailsLink }}" class="btn-espresso hover:bg-noise">
           <i class="bi bi-journal-text text-17-18-21-25"></i>
           <p class="text-12-13-16-20">Lire l’article</p>
         </router-link>
@@ -47,6 +47,6 @@ defineProps({
   title: String,
   image: String,
   description: String,
-  link: String
+  detailsLink: String
 })
 </script>

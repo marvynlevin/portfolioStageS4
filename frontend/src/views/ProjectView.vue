@@ -1,15 +1,61 @@
 <template>
-  <div class="project-page px-[2%] sm:px-[5%] md:px-[10%] lg:px-[15%] py-10">
-    <p class="text-14-15-16-20 font-light italic">{{ metadata.subTitle }}</p>
-    <h1 class="text-60-95-105-115 font-black leading-none mb-2 md:mb-6">{{ metadata.title }}</h1>
-    <img v-if="metadata.image" :src="metadata.image" :alt="metadata.title" class="w-full rounded-lg mb-6"/>
-    <component class="text-justify text-14-15-18-22 px-[8%] md:px-[15%]" :is="MarkdownComponent"/>
+  <div class="relative project-page px-[2%] sm:px-[5%] md:px-[10%] lg:px-[15%] py-10">
+
+            <!-- Bouton Retour -->
+        <button
+          @click="goBack"
+          class="fixed bottom-4 cursor-pointer left-4 py-3 px-4.5 rounded-full bg-blush text-white hover:bg-dusk transition-all duration-300 shadow-lg hover:-translate-y-2 transition-transform duration-200 z-[40]"
+        >
+          <i class="bi bi-arrow-bar-left text-[20px]"/>
+        </button>
+
+    <!-- Sous-titre + Action à droite -->
+    <div class="flex items-center justify-between">
+      <p class="text-14-15-16-20 font-light italic">
+        {{ metadata.subTitle }}
+      </p>
+
+      <div class="flex items-center gap-2">
+
+        <!-- Bouton Partager -->
+        <button
+          @click="sharePage"
+          class="px-3 py-2 bg-espresso rounded-b-full flex items-center gap-2 text-vanilla cursor-pointer"
+        >
+          <i class="bi bi-reply text-17-18-21-25"/>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Titre -->
+    <h1 class="text-65-95-105-115 font-black leading-none mb-2 md:mb-6 tracking-tighter">
+      {{ metadata.title }}
+    </h1>
+
+    <!-- Image -->
+    <img
+      v-if="metadata.image"
+      :src="metadata.image"
+      :alt="metadata.title"
+      class="w-full rounded-lg mb-6"
+    />
+
+    <!-- Contenu Markdown -->
+    <component
+      class="text-justify text-14-15-18-22 px-[8%] md:px-[0%] mb-10 md:mb-20"
+      :is="MarkdownComponent"
+    />
   </div>
+
+    <!-- Bas de page -->
+  <FooterComponent/>
 </template>
 
 <script setup>
 import {ref, onMounted, watch} from 'vue'
 import {useRoute} from 'vue-router'
+import FooterComponent from "@/components/footer/FooterComponent.vue";
 
 const route = useRoute()
 const metadata = ref({})
@@ -22,6 +68,7 @@ async function loadMarkdown(slug) {
     console.log("MODULE LOADED =>", module)
     metadata.value = {
       subTitle: module.subTitle,
+      shareInfo: module.shareInfo,
       title: module.title,
       image: module.image,
       meta: module.meta
@@ -34,5 +81,25 @@ async function loadMarkdown(slug) {
 }
 
 onMounted(() => loadMarkdown(route.params.slug))
+
 watch(() => route.params.slug, newSlug => loadMarkdown(newSlug))
+
+const sharePage = () => {
+  const title = metadata.value?.shareInfo || "Partager la page"
+  const url = window.location.href
+
+  if (navigator.share) {
+    navigator
+      .share({ title, url })
+      .catch(err => console.warn("Partage annulé :", err))
+  } else {
+    navigator.clipboard.writeText(url)
+    alert("Lien copié dans le presse-papier !")
+  }
+}
+
+
+const goBack = () => {
+  window.history.back()
+}
 </script>

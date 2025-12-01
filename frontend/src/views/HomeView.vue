@@ -2,8 +2,8 @@
   <!-- Haut de page -->
   <section class="h-screen w-full relative">
 
-    <img class="hidden md:block absolute top-0 right-0 w-[300px] h-auto pointer-events-none select-none z-10 rounded-3xl" src="/bg1.png" alt="Photo de couleur pour le fond">
-    <img class="hidden md:block absolute bottom-0 left-0 w-[300px] h-auto pointer-events-none select-none z-10 rounded-3xl" src="/bg2.png" alt="Photo de couleur pour le fond">
+    <img class="absolute top-0 right-0 w-[150px] md:w-[300px] h-auto pointer-events-none select-none z-10 rounded-3xl" src="/bg1.png" alt="Photo de couleur pour le fond">
+    <img class="absolute bottom-0 left-0 w-[150px] md:w-[300px] h-auto pointer-events-none select-none z-10 rounded-3xl" src="/bg2.png" alt="Photo de couleur pour le fond">
 
 
     <!-- Titre -->
@@ -37,13 +37,13 @@
           <RouterLink to="/stage" class="cursor-pointer">
             <button class="btn-espresso floatY">
               <i class="bi bi-link-45deg text-17-18-21-25"></i>
-              <p class="text-12-13-16-20">Portfolio Stage Akolad</p>
+              <p class="text-17-18-21-25">Portfolio Stage Akolad</p>
             </button>
           </RouterLink>
           <RouterLink to="/portfolio" class="cursor-pointer">
             <button class="btn-espresso floatY">
               <i class="bi bi-link-45deg text-17-18-21-25"></i>
-              <p class="text-12-13-16-20">Portfolio Book</p>
+              <p class="text-17-18-21-25">Portfolio Book</p>
             </button>
           </RouterLink>
         </div>
@@ -55,13 +55,13 @@
           <RouterLink to="/stage" class="cursor-pointer">
             <button class="btn-espresso floatY">
               <i class="bi bi-link-45deg text-17-18-21-25"></i>
-              <p class="text-12-13-16-20">Portfolio Stage Akolad</p>
+              <p class="text-17-18-21-25 py-2 sm:py-0">Portfolio Stage Akolad</p>
             </button>
           </RouterLink>
           <RouterLink to="/portfolio" class="cursor-pointer">
             <button class="btn-espresso floatY">
               <i class="bi bi-link-45deg text-17-18-21-25"></i>
-              <p class="text-12-13-16-20">Portfolio Book</p>
+              <p class="text-17-18-21-25 py-2 sm:py-0">Portfolio Book</p>
             </button>
           </RouterLink>
         </div>

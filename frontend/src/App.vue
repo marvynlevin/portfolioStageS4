@@ -177,8 +177,8 @@ html.is-loading, html.is-loading * {
   font-size: 45px;
 }
 
-.text-60-95-105-115 {
-  font-size: 60px;
+.text-65-95-105-115 {
+  font-size: 65px;
 }
 
 @media (min-width: 640px) {
@@ -214,7 +214,7 @@ html.is-loading, html.is-loading * {
     font-size: 80px;
   }
 
-  .text-60-95-105-115 {
+  .text-65-95-105-115 {
     font-size: 95px;
   }
 }
@@ -253,7 +253,7 @@ html.is-loading, html.is-loading * {
     font-size: 90px;
   }
 
-  .text-60-95-105-115 {
+  .text-65-95-105-115 {
   font-size: 105px;
 }
 }
@@ -291,7 +291,7 @@ html.is-loading, html.is-loading * {
     font-size: 100px;
   }
 
-  .text-60-95-105-115 {
+  .text-65-95-105-115 {
   font-size: 140px;
 }
 }

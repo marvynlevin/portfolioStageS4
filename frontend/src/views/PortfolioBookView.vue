@@ -2,6 +2,14 @@
   <!-- Barre de navigation -->
   <NavbarPortfolioComponent/>
 
+  <!-- Bouton Home Page -->
+  <button
+      @click="goBack"
+      class="fixed bottom-4 cursor-pointer left-4 py-3 px-4.5 rounded-full bg-blush text-white hover:bg-dusk transition-all duration-300 shadow-lg hover:-translate-y-2 transition-transform duration-200 z-[40]"
+  >
+    <i class="bi bi-house text-[20px]"/>
+  </button>
+
   <!--Haut de page-->
   <section
       class="relative overflow_hidden sm:p-16 mb-[30vh] pt-[15vh] sm:pt-[17vh] md:pt-[15vh] lg:pt-[9vh] xl:pt-[7vh] 2xl:pt-[14vh] md:h-screen">
@@ -34,7 +42,7 @@
       <span class="italic font-normal">mon</span> <span class="font-semibold">PORTFOLIO</span>
     </p>
     <p
-        class="text-17-18-21-25 mt-10 text-espresso font-playfair text-center mx-[15%] mt-12"
+        class="text-17-18-21-25 text-espresso font-playfair text-center mx-[15%] mt-12"
     >
       <span class="font-black">« Concevoir, expérimenter, apprendre. »</span><br>
       Bienvenue dans mon Portfolio Book, une sélection de mes réalisations les plus représentatives, pensées avec
@@ -138,7 +146,7 @@
     <div
         class="relative group pt-12 sm:pt-24 px-[8%] sm:px-[15%] font-normal text-espresso font-playfair text-justify text-14-15-18-22">
       <div class="relative z-10">
-        <p>01 - 03</p>
+        <p>01 - 04</p>
         <h2 class="font-black italic text-espresso font-playfair text-left text-18-19-24-30">Explorer les projets</h2>
         <p>Avant d’entrer dans le détail, une idée revient dans chacun d’eux : <strong>créer quelque chose qui
           fonctionne… et qui a du sens</strong>. Derrière chaque ligne de code, il y a une intention : <strong>répondre
@@ -160,11 +168,11 @@
   ]"
         description="Application <strong>web full-stack</strong> simulant la gestion d'un grand événement inspiré des 24h du Mans. L’objectif était d’offrir une interface claire pour organiser prestataires, zones, services et flux visiteurs comme dans un vrai contexte logistique."
         :features="[
-    'Gestion des prestataires et organisateurs',
-    'Carte interactive avec zones assignées, consultables et modifiables',
-    'Statistiques d’affluence interactifs',
-    'Attribution des services par prestataire',
-    'Interfaces pensées pour être visuelles et opérationnelles',
+    'Gestion des prestataires et organisateurs ;',
+    'Carte interactive avec zones assignées, consultables et modifiables ;',
+    'Statistiques d’affluence interactifs ;',
+    'Attribution des services par prestataire ;',
+    'Interfaces pensées pour être visuelles et opérationnelles.',
   ]"
         :technos="['Vue.js', 'Tailwind', 'Leaflet', 'API Rest', 'Node.Js', 'Prisma', 'JavaScript']"
         detailsLink="24h-du-mans"
@@ -179,11 +187,11 @@
   ]"
         description="Application <strong>full-stack</strong> et <strong>mobile</strong> visant à prévenir et détecter les feux de forêt. L’objectif était de fournir un outil fiable permettant d’anticiper les risques, confirmer rapidement les départs de feu et offrir une vision claire aux acteurs de terrain."
         :features="[
-    'Détection via capteurs environnementaux (température, humidité, CO₂, luminosité)',
-    'Application mobile Flutter pour les signalements citoyens géolocalisés',
-    'Tableau de bord web : carte interactive, alertes en temps réel et visualisation des risques',
-    'Calcul auto d’un Indice De Risque (IDR) basé sur les données des microcontrôleurs',
-    'Historique des événements, suivi des alertes et consultation des séries temporelles',
+    'Détection via capteurs environnementaux (température, humidité, CO₂, luminosité) ;',
+    'Application mobile Flutter pour les signalements citoyens géolocalisés ;',
+    'Tableau de bord web : carte interactive, alertes en temps réel et visualisation des risques ;',
+    'Calcul auto d’un Indice De Risque (IDR) basé sur les données des microcontrôleurs ;',
+    'Historique des événements, suivi des alertes et consultation des séries temporelles.',
   ]"
         :technos="['Vue.js', 'Tailwind', 'Flutter', 'Material3', 'Node.Js', 'Docker', 'Arduino']"
         detailsLink="firewatch"
@@ -198,12 +206,12 @@
   ]"
         description="Site vitrine <strong>front-end</strong> réalisé pour une entreprise spécialisée en énergies renouvelables. L’objectif était de concevoir une interface professionnelle, claire et rassurante pour présenter les solutions proposées : installation, entretien et dépannage."
         :features="[
-    'Page d’accueil présentant la mission et les services clés',
-    'Sections dédiées aux installations avec explications des fonctionnements',
-    'Formulaire de contact et contacts',
-    'Témoignage client intégré pour renforcer la confiance',
-    'Mentions légales, politique de confidentialité et informations pratiques',
-    'Design moderne, épuré, responsive, pensé pour être accessible',
+    'Page d’accueil présentant la mission et les services clés ;',
+    'Sections dédiées aux installations avec explications des fonctionnements ;',
+    'Formulaire de contact et contacts ;',
+    'Témoignage client intégré pour renforcer la confiance ;',
+    'Mentions légales, politique de confidentialité et informations pratiques ;',
+    'Design moderne, épuré, responsive, pensé pour être accessible.',
   ]"
         :technos="['HTML5', 'CSS3', 'PHP', 'JavaScript']"
         detailsLink="levinenergie"
@@ -274,7 +282,7 @@
     <div
         class="relative group pt-12 sm:pt-24 px-[8%] sm:px-[15%] font-normal text-espresso font-playfair text-justify text-14-15-18-22">
       <div class="relative z-10">
-        <p>02 - 03</p>
+        <p>02 - 04</p>
         <h2 class="font-black italic text-espresso font-playfair text-left text-18-19-24-30">Explorer mes
           savoir-faire</h2>
         <p>« Concevoir, structurer et donner vie à des expériences numériques utiles ». Je crée des interfaces
@@ -478,7 +486,7 @@
     <div
         class="relative group pt-12 sm:pt-24 px-[8%] sm:px-[15%] font-normal text-espresso font-playfair text-justify text-14-15-18-22">
       <div class="relative z-10">
-        <p>03 - 03</p>
+        <p>03 - 04</p>
         <h2 class="font-black italic text-espresso font-playfair text-left text-18-19-24-30">Prenez contact avec
           moi</h2>
         <p>« Je suis toujours ravi d’échanger, de découvrir de nouveaux projets et de collaborer avec d’autres
@@ -547,6 +555,24 @@
       ></div>
     </div>
 
+    <div
+        class="relative group pt-12 sm:pt-24 px-[8%] sm:px-[15%] font-normal text-espresso font-playfair text-justify text-14-15-18-22">
+      <div class="relative z-10">
+        <p>04 - 04</p>
+        <h2 class="font-black italic text-espresso font-playfair text-left text-18-19-24-30">Découvrez tous mes articles
+        </h2>
+        <p>«Je partage ici des conseils, des astuces et des réflexions sur le Net.»
+          Parcourez les articles pour en apprendre davantage, approfondir vos connaissances et suivre les dernières
+          tendances.
+        </p>
+      </div>
+      <div
+          class="absolute bottom-[15px] sm:bottom-[40px] md:bottom-[50px] lg:bottom-[70px] left-[27%] sm:left-[10%] lg:left-[12%] w-[75%] sm:w-[70%] md:w-[68%]
+          lg:w-[65%] sm:h-[60%] lg:h-[55%] h-0 bg-linen opacity-100 origin-left scale-x-100 transition-transform
+          duration-700 ease-in-out z-0"
+      ></div>
+    </div>
+
     <div class="px-[8%] sm:px-[15%] mt-14 sm:mt-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
       <BlogCardComponent
           v-for="(b, i) in blogs"
@@ -554,7 +580,7 @@
           :title="b.title"
           :image="b.image"
           :description="b.description"
-          :link="b.link"
+          :detailsLink="b.detailsLink"
       />
     </div>
 
@@ -677,31 +703,31 @@ export default {
           title: "Agriculture Intelligente",
           image: "/bg-agriculture-intelligente.png",
           description: "« Robots, IA et data transforment l’agriculture, offrant des cultures plus durables, tout en facilitant le travail. »",
-          link: ""
+          detailsLink: "agriculture-intelligente"
         },
         {
           title: "Découverte de Symfony",
           image: "/bg-decouverte-symfony.png",
           description: "« Symfony simplifie et accélère le développement web grâce à sa structure robuste, ses outils puissants et sa grande flexibilité. »",
-          link: ""
+          detailsLink: "decouverte-de-symfony"
         },
         {
           title: "Google MyBusiness",
           image: "/bg-google-mybusiness.png",
           description: "« Google MyBusiness aide les entreprises à gagner en visibilité locale, attirer plus de clients et optimiser leur présence en ligne. »",
-          link: ""
+          detailsLink: "google-mybusiness"
         },
         {
           title: "Améliorer son SEO",
           image: "/bg-seo.png",
           description: "« Le SEO améliore le positionnement d’un site en optimisant contenu, structure et mots-clés pour attirer un trafic naturel durable. »",
-          link: "/blogs/article-1"
+          detailsLink: "ameliorer-son-seo"
         },
         {
           title: "Comparaison de BDD",
           image: "/bg-bdd.png",
           description: "« Chaque base de données a ses forces : performance, flexibilité ou sécurité ; bien choisir dépend des besoins du projet. »",
-          link: ""
+          detailsLink: "comparaison-de-bdd"
         }
       ]
     }
@@ -734,6 +760,9 @@ export default {
     },
   },
   methods: {
+    goBack() {
+      this.$router.push({name: 'home'})
+    },
     scrollToNextSection() {
       const nextSection = document.getElementById('presentation')
       if (nextSection) {

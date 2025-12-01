@@ -35,10 +35,10 @@ transform transition-transform duration-800 ease-out hover:scale-[1.02] hover:-r
     <!-- Contenu -->
     <div class="px-6 py-6 md:py-12 space-y-4">
       <!-- Description -->
-      <p class="text-espresso text-14-15-16-20 leading-relaxed text-justify md:text-left" v-html="description"></p>
+      <p class="text-espresso font-semibold text-14-15-16-20 leading-relaxed text-justify md:text-left" v-html="description"></p>
 
       <!-- Liste -->
-      <ul class="list-disc pl-6 text-espresso text-14-15-16-20 text-justify md:text-left">
+      <ul class="list-disc pl-6 text-espresso font-semibold text-14-15-16-20 text-justify md:text-left">
         <li v-for="(f, i) in features" :key="i" v-html="f"></li>
       </ul>
 
