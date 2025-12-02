@@ -94,9 +94,7 @@ html.is-loading, html.is-loading * {
   gap: 0.5rem;
   background-color: #3C2821;
   color: #FFF3E2;
-  padding: 0.25rem 2rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding: 0.6rem 2rem;
   border-radius: 0.375rem;
   font-style: italic;
   font-weight: 700;
@@ -127,9 +125,7 @@ html.is-loading, html.is-loading * {
   outline: 2px solid #3C2821;
   background-color: #FFF3E2;
   color: #3C2821;
-  padding: 0.25rem 2rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding: 0.6rem 2rem;
   border-radius: 0.375rem;
   font-style: italic;
   font-weight: 700;
