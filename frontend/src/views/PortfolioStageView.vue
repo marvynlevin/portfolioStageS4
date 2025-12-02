@@ -5,6 +5,7 @@
   <!-- Bouton Home Page -->
   <button
       @click="goBack"
+      aria-label="Retour page d'accueil"
       class="fixed bottom-4 cursor-pointer left-4 py-3 px-4.5 rounded-full bg-blush text-white hover:bg-dusk transition-all duration-300 shadow-lg hover:-translate-y-2 transition-transform duration-200 z-[40]"
   >
     <i class="bi bi-house text-[20px]"/>
@@ -52,6 +53,7 @@
       <img
           @click="scrollToNextSection"
           src="@/assets/img/descendre.png"
+          alt=""
           :class="[
         'transition-transform duration-300 ease-in-out cursor-pointer w-[70px] pt-[15vh] sm:pt-0 sm:w-[100px] h-auto hover:scale-110',
         (hover || autoMove) ? 'translate-y-6' : ''

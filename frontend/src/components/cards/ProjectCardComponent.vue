@@ -24,6 +24,7 @@ transform transition-transform duration-800 ease-out hover:scale-[1.02] hover:-r
             :key="i"
             :href="l.url"
             target="_blank"
+            aria-label="Lien cliquable"
             rel="noopener"
             class="text-vanilla hover:text-blush transition"
         >
