@@ -108,6 +108,8 @@ html.is-loading, html.is-loading * {
   .btn-espresso {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
   }
 }
 
@@ -133,12 +135,16 @@ html.is-loading, html.is-loading * {
   border-radius: 0.375rem;
   font-style: italic;
   font-weight: 700;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 @media (min-width: 640px) {
   .btn-espresso-disabled {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
   }
 }
 
