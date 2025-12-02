@@ -65,7 +65,7 @@
             <span class="text-17-18-21-25 py-1 sm:py-0">Portfolio Stage Akolad</span>
           </RouterLink>
         <RouterLink
-              to="/stage"
+              to="/portfolio"
               class="btn-espresso floatY inline-flex cursor-pointer"
           >
             <i class="bi bi-link-45deg text-17-18-21-25"></i>
