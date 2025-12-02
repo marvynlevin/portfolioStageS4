@@ -15,6 +15,7 @@
     "@unhead/vue": "^2.0.10",
     "@vueuse/head": "^2.0.0",
     "apexcharts": "^4.7.0",
+    "bootstrap-icons": "^1.13.1",
     "lil-gui": "^0.20.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.1",
