@@ -3,6 +3,11 @@ subTitle: "Projets > Levin Energie > Détails du projet"
 title: "Levin Energie"
 image: "/banniere-levinenergie.png"
 shareInfo: "Projet Universitaire : Levin Energie"
+meta:
+    - name: description
+      content: "Levin Energie : création complète d’un site vitrine, gestion SEO et réseaux sociaux pour une entreprise spécialisée en énergies renouvelables."
+    - name: keywords  
+      content: "Levin Energie, projet universitaire, développement web, site vitrine, SEO, Google My Business, réseaux sociaux, design graphique, communication digitale"
 ---
 
 

@@ -3,6 +3,11 @@ subTitle: "Projets > FireWatch > Détails du projet"
 title: "FireWatch"
 image: "/banniere-firewatch.png"
 shareInfo: "Projet Universitaire : FireWatch"
+meta:
+  - name: description
+    content: "FireWatch : application full-stack et mobile pour prévenir et détecter les feux de forêt grâce à un réseau de capteurs, IA et plateforme web centralisée."
+  - name: keywords
+    content: "FireWatch, projet universitaire, développement web, full-stack, application mobile, IA, prévention incendies, Vue.js, Flutter, Node.js"
 ---
 
 <TitleComponent

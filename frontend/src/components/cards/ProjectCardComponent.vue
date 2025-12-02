@@ -10,9 +10,10 @@ transform transition-transform duration-800 ease-out hover:scale-[1.02] hover:-r
     <ResponsiveImageComponent
         v-if="backgroundImage"
         :src="backgroundImage"
-        alt="Image de fond du projet"
-        :breakpoints="{ sm: 200, md: 400, lg: 600 }"
-        class="absolute inset-0 w-full h-full object-cover opacity-30 -z-10"
+        alt="Image de fond"
+        :sizes="{ mobile: 200, tablet: 300, desktop: 450, large: 600, default: 600 }"
+        :breakpoints="{ mobile: 640, tablet: 1024, desktop: 1280, large: 99999 }"
+        img-class="absolute inset-0 w-full h-full object-cover opacity-30 -z-10"
     />
 
     <!-- Bannière -->

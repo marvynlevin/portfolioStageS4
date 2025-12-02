@@ -5,8 +5,9 @@
         v-if="src"
         :src="src"
         :alt="alt"
-        :breakpoints="{ sm: 200, md: 400, lg: 600 }"
-        :class="[
+        :sizes="{ mobile: 200, tablet: 300, desktop: 450, large: 600, default: 600 }"
+        :breakpoints="{ mobile: 640, tablet: 1024, desktop: 1280, large: 99999 }"
+        :img-class="[
         'w-full mx-auto md:w-2/3 rounded-lg my-4',
         shadow ? 'shadow-[1px_1px_22px_0_rgba(0,0,0,0.25)]' : ''
       ]"

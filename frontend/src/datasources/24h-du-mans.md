@@ -3,6 +3,11 @@ subTitle: "Projets > 24h Du Mans > Détails du projet"
 title: "24h Du Mans"
 image: "/banniere-24hmans.png"
 shareInfo: "Projet Universitaire : 24h Du Mans"
+meta:
+  - name: description
+    content: "Simulation complète de l’organisation des 24h du Mans : gestion des prestataires, carte interactive, statistiques et attribution des services."
+  - name: keywords
+    content: "24h du Mans, projet universitaire, développement web, full-stack, gestion événementielle, carte interactive, statistiques"
 ---
 
 <TitleComponent 
