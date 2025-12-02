@@ -5,8 +5,6 @@
     :class="imgClass"
     loading="lazy"
     :style="imgStyle"
-    :width="currentSize"
-    :height="Math.round(currentSize * 0.508)"
   />
 </template>
 
@@ -19,21 +17,16 @@ const props = defineProps({
   sizes: {
     type: Object,
     default: () => ({
-      mobile: 200,    // < 640px
-      tablet: 300,    // 640px - 1023px
-      desktop: 450,   // 1024px - 1279px
-      large: 600      // ≥ 1280px
+      mobile: 200,
+      tablet: 300,
+      desktop: 450,
+      large: 600
     })
   },
-  // Ratio d'aspect (width/height) - calculé à partir de tes images: 500/254 = 1.9685
-  aspectRatio: {
-    type: Number,
-    default: 500/254 // ≈ 1.9685
-  },
-  // Qualité pour Vercel (1-100)
-  quality: {
-    type: Number,
-    default: 80
+  // Force l'utilisation de Vercel Image Optimization (pour tester)
+  forceVercel: {
+    type: Boolean,
+    default: false
   },
   imgClass: {
     type: [String, Array, Object],
@@ -46,7 +39,36 @@ const props = defineProps({
 })
 
 const screenWidth = ref(0)
-const currentSize = ref(props.sizes.large)
+const currentSize = ref(600)
+const currentImageUrl = ref('')
+
+// Meilleure détection de Vercel
+const isVercel = computed(() => {
+  // 1. Si forcé manuellement
+  if (props.forceVercel) return true
+
+  // 2. En production (build Vercel)
+  if (import.meta.env.PROD) {
+    // Vérifie les headers spécifiques à Vercel
+    const vercelHeaders = [
+      'x-vercel-id',
+      'server', // Vercel met souvent 'Vercel' ici
+      'x-vercel-deployment-url'
+    ]
+
+    // Vérifie aussi l'URL
+    const hostname = window.location.hostname
+    const isVercelDomain =
+      hostname.includes('vercel.app') ||
+      hostname.includes('now.sh') ||
+      hostname.includes('vercel.com')
+
+    // Pour être sûr, on peut aussi vérifier si l'API Vercel répond
+    return isVercelDomain || import.meta.env.VITE_VERCEL === '1'
+  }
+
+  return false
+})
 
 const updateImage = () => {
   screenWidth.value = window.innerWidth
@@ -61,52 +83,43 @@ const updateImage = () => {
     currentSize.value = props.sizes.large
   }
 
-  console.log(`📱 ${screenWidth.value}px → Image: ${currentSize.value}px`)
+  // Construction de l'URL selon l'environnement
+  if (isVercel.value) {
+    // URL Vercel Image Optimization
+    // IMPORTANT: L'URL doit être absolue et publique
+    const imagePath = props.src.startsWith('http') ? props.src : window.location.origin + props.src
+
+    // Vercel accepte différents formats :
+    // Option 1: Service officiel (nécessite que l'image soit publique)
+    currentImageUrl.value = `/_vercel/image?url=${encodeURIComponent(imagePath)}&w=${currentSize.value}&q=75`
+
+    // Option 2: Alternative avec l'API Next.js (fonctionne aussi)
+    // currentImageUrl.value = `/_next/image?url=${encodeURIComponent(imagePath)}&w=${currentSize.value}&q=75`
+
+    // Option 3: Via le proxy CDN
+    // currentImageUrl.value = `/cdn-cgi/image/width=${currentSize.value},format=auto${props.src}`
+
+    console.log(`🚀 Vercel Image: ${currentSize.value}px`)
+  } else {
+    // En développement ou autre hébergement
+    const timestamp = Date.now()
+    currentImageUrl.value = `${props.src}?w=${currentSize.value}&t=${timestamp}`
+    console.log(`💻 Dev Image: ${currentSize.value}px`)
+  }
 }
 
-// Détecte si on est en production sur Vercel
-const isVercelProduction = computed(() => {
-  return import.meta.env.PROD && window.location.hostname.includes('vercel.app')
-})
-
-// URL pour Vercel Image Optimization
-const vercelImageUrl = computed(() => {
-  const params = new URLSearchParams({
-    url: props.src.startsWith('/') ? props.src : `/${props.src}`,
-    w: currentSize.value.toString(),
-    q: props.quality.toString()
+onMounted(() => {
+  // Log pour debug
+  console.log('🔍 Détection Vercel:', {
+    mode: import.meta.env.MODE,
+    prod: import.meta.env.PROD,
+    hostname: window.location.hostname,
+    isVercel: isVercel.value,
+    forceVercel: props.forceVercel
   })
 
-  // Optionnel: format webp pour meilleure compression
-  // params.set('format', 'webp')
-
-  return `/_vercel/image?${params.toString()}`
-})
-
-// URL normale (pour dev ou non-Vercel)
-const normalImageUrl = computed(() => {
-  const timestamp = Date.now()
-  return `${props.src}?w=${currentSize.value}&t=${timestamp}`
-})
-
-// URL finale
-const currentImageUrl = computed(() => {
-  return isVercelProduction.value ? vercelImageUrl.value : normalImageUrl.value
-})
-
-// Calcul de la hauteur basé sur l'aspect ratio
-const imageHeight = computed(() => {
-  return Math.round(currentSize.value / props.aspectRatio)
-})
-
-onMounted(() => {
   updateImage()
   window.addEventListener('resize', updateImage)
-
-  // Log pour debug
-  console.log('🌐 Environnement:', import.meta.env.MODE)
-  console.log('🚀 Vercel détecté:', isVercelProduction.value)
-  console.log('🖼️ URL image:', currentImageUrl.value)
 })
 
 onUnmounted(() => {
