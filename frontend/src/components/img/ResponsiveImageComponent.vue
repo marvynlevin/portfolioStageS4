@@ -23,10 +23,10 @@ const props = defineProps({
       large: 600
     })
   },
-  // Force l'utilisation de Vercel Image Optimization (pour tester)
-  forceVercel: {
+  // Active Vercel Image Optimization en production
+  useVercel: {
     type: Boolean,
-    default: false
+    default: import.meta.env.PROD // TRUE en production, FALSE en dev
   },
   imgClass: {
     type: [String, Array, Object],
@@ -42,34 +42,6 @@ const screenWidth = ref(0)
 const currentSize = ref(600)
 const currentImageUrl = ref('')
 
-// Meilleure détection de Vercel
-const isVercel = computed(() => {
-  // 1. Si forcé manuellement
-  if (props.forceVercel) return true
-
-  // 2. En production (build Vercel)
-  if (import.meta.env.PROD) {
-    // Vérifie les headers spécifiques à Vercel
-    const vercelHeaders = [
-      'x-vercel-id',
-      'server', // Vercel met souvent 'Vercel' ici
-      'x-vercel-deployment-url'
-    ]
-
-    // Vérifie aussi l'URL
-    const hostname = window.location.hostname
-    const isVercelDomain =
-      hostname.includes('vercel.app') ||
-      hostname.includes('now.sh') ||
-      hostname.includes('vercel.com')
-
-    // Pour être sûr, on peut aussi vérifier si l'API Vercel répond
-    return isVercelDomain || import.meta.env.VITE_VERCEL === '1'
-  }
-
-  return false
-})
-
 const updateImage = () => {
   screenWidth.value = window.innerWidth
 
@@ -83,39 +55,31 @@ const updateImage = () => {
     currentSize.value = props.sizes.large
   }
 
-  // Construction de l'URL selon l'environnement
-  if (isVercel.value) {
-    // URL Vercel Image Optimization
-    // IMPORTANT: L'URL doit être absolue et publique
-    const imagePath = props.src.startsWith('http') ? props.src : window.location.origin + props.src
+  // Construction de l'URL
+  if (props.useVercel && import.meta.env.PROD) {
+    // IMPORTANT: Pour Vercel, l'image doit être accessible publiquement
+    // Si ton image est dans /public, utilise le chemin relatif
+    const imagePath = props.src
 
-    // Vercel accepte différents formats :
-    // Option 1: Service officiel (nécessite que l'image soit publique)
-    currentImageUrl.value = `/_vercel/image?url=${encodeURIComponent(imagePath)}&w=${currentSize.value}&q=75`
+    // Vercel Image Optimization - format officiel
+    // Note: Les images doivent être dans le dossier public ou sur un CDN public
+    currentImageUrl.value = `/_vercel/image?url=${encodeURIComponent(imagePath)}&w=${currentSize.value}&q=80`
 
-    // Option 2: Alternative avec l'API Next.js (fonctionne aussi)
-    // currentImageUrl.value = `/_next/image?url=${encodeURIComponent(imagePath)}&w=${currentSize.value}&q=75`
-
-    // Option 3: Via le proxy CDN
-    // currentImageUrl.value = `/cdn-cgi/image/width=${currentSize.value},format=auto${props.src}`
-
-    console.log(`🚀 Vercel Image: ${currentSize.value}px`)
+    console.log(`🚀 Vercel Image (${currentSize.value}px):`, currentImageUrl.value)
   } else {
-    // En développement ou autre hébergement
+    // Développement ou fallback
     const timestamp = Date.now()
     currentImageUrl.value = `${props.src}?w=${currentSize.value}&t=${timestamp}`
-    console.log(`💻 Dev Image: ${currentSize.value}px`)
+    console.log(`💻 Dev Image (${currentSize.value}px):`, currentImageUrl.value)
   }
 }
 
 onMounted(() => {
-  // Log pour debug
-  console.log('🔍 Détection Vercel:', {
-    mode: import.meta.env.MODE,
-    prod: import.meta.env.PROD,
-    hostname: window.location.hostname,
-    isVercel: isVercel.value,
-    forceVercel: props.forceVercel
+  console.log('🖼️ Image Component:', {
+    src: props.src,
+    useVercel: props.useVercel,
+    production: import.meta.env.PROD,
+    mode: import.meta.env.MODE
   })
 
   updateImage()
