@@ -621,26 +621,26 @@ import FooterComponent from "@/components/footer/FooterComponent.vue";
 import FormContactComponent from "@/components/form/FormContactComponent.vue";
 
 export default {
-  name: 'HomeView',
+  name: 'PortfolioBookView',
   setup() {
     useHead({
-      title: 'Marvyn Levin - Portfolio de Stage',
+      title: 'Marvyn Levin - Portfolio',
       meta: [
         {
           name: 'description',
-          content: 'Portfolio de stage de Marvyn Levin, étudiant en BUT Informatique, présentant ses compétences et projets réalisés chez Akolad Solutions.'
+          content: 'Découvrez mon portfolio dans lequel je vous fait part de mes projets et vous invite a lire mon blog.'
         },
         {
           name: 'keywords',
-          content: 'portfolio, stage, informatique, développement, Akolad Solutions, Symfony, Doctrine, Twig'
+          content: 'portfolio, informatique, développement, contact, web, logiciel, application, design'
         },
         {
           property: 'og:title',
-          content: 'Marvyn Levin - Portfolio de Stage'
+          content: 'Marvyn Levin - Portfolio'
         },
         {
           property: 'og:description',
-          content: 'Découvrez mon portfolio de stage en développement web chez Akolad Solutions.'
+          content: 'Découvrez mon portfolio dans lequel je vous fait part de mes projets et vous invite a lire mon blog.'
         },
         {
           property: 'og:type',
@@ -660,11 +660,11 @@ export default {
         },
         {
           name: 'twitter:title',
-          content: 'Marvyn Levin - Portfolio de Stage'
+          content: 'Marvyn Levin - Portfolio'
         },
         {
           name: 'twitter:description',
-          content: 'Portfolio de stage en développement web.'
+          content: 'Découvrez mon portfolio dans lequel je vous fait part de mes projets et vous invite a lire mon blog.'
         },
         {
           name: 'twitter:image',
