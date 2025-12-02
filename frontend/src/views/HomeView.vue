@@ -35,7 +35,7 @@
            alt="Flèche qui pointe du texte au carousel"/>
 
       <div class="flex flex-col mt-16 justify-between">
-        <div class="flex flex-row gap-4 justify-end pr-10 mt-2 sm:mt-0">
+        <div class="flex flex-row gap-4 justify-end pr-10 mt-2 sm:mt-0 z-20">
           <RouterLink
               to="/stage"
               class="btn-espresso floatY inline-flex cursor-pointer"
@@ -56,7 +56,7 @@
     </div>
 
     <div class="flex md:hidden flex-col mt-16 items-center">
-      <div class="flex flex-col gap-4 justify-center mt-2">
+      <div class="flex flex-col gap-4 justify-center mt-2 z-20">
         <RouterLink
               to="/stage"
               class="btn-espresso floatY inline-flex cursor-pointer"
