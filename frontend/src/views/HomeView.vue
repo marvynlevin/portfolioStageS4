@@ -36,17 +36,20 @@
 
       <div class="flex flex-col mt-16 justify-between">
         <div class="flex flex-row gap-4 justify-end pr-10 mt-2 sm:mt-0">
-          <RouterLink to="/stage" class="cursor-pointer">
-            <button class="btn-espresso floatY">
-              <i class="bi bi-link-45deg text-17-18-21-25"></i>
-              <p class="text-17-18-21-25">Portfolio Stage Akolad</p>
-            </button>
+          <RouterLink
+              to="/stage"
+              class="btn-espresso floatY inline-flex cursor-pointer"
+          >
+            <i class="bi bi-link-45deg text-17-18-21-25"></i>
+            <span class="text-17-18-21-25">Portfolio Stage Akolad</span>
           </RouterLink>
-          <RouterLink to="/portfolio" class="cursor-pointer">
-            <button class="btn-espresso floatY">
-              <i class="bi bi-link-45deg text-17-18-21-25"></i>
-              <p class="text-17-18-21-25">Portfolio Book</p>
-            </button>
+
+          <RouterLink
+              to="/portfolio"
+              class="btn-espresso floatY inline-flex cursor-pointer"
+          >
+            <i class="bi bi-link-45deg text-17-18-21-25"></i>
+            <span class="text-17-18-21-25">Portfolio Book</span>
           </RouterLink>
         </div>
       </div>
@@ -54,18 +57,20 @@
 
     <div class="flex md:hidden flex-col mt-16 items-center">
       <div class="flex flex-col gap-4 justify-center mt-2">
-        <RouterLink to="/stage" class="cursor-pointer">
-          <button class="btn-espresso floatY">
+        <RouterLink
+              to="/stage"
+              class="btn-espresso floatY inline-flex cursor-pointer"
+          >
             <i class="bi bi-link-45deg text-17-18-21-25"></i>
-            <p class="text-17-18-21-25 py-2 sm:py-0">Portfolio Stage Akolad</p>
-          </button>
-        </RouterLink>
-        <RouterLink to="/portfolio" class="cursor-pointer">
-          <button class="btn-espresso floatY">
+            <span class="text-17-18-21-25 py-1 sm:py-0">Portfolio Stage Akolad</span>
+          </RouterLink>
+        <RouterLink
+              to="/stage"
+              class="btn-espresso floatY inline-flex cursor-pointer"
+          >
             <i class="bi bi-link-45deg text-17-18-21-25"></i>
-            <p class="text-17-18-21-25 py-2 sm:py-0">Portfolio Book</p>
-          </button>
-        </RouterLink>
+            <span class="text-17-18-21-25 py-1 sm:py-0">Portfolio Book</span>
+          </RouterLink>
       </div>
     </div>
   </section>

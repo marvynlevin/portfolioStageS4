@@ -15,10 +15,12 @@
   <section
       class="relative overflow_hidden sm:p-16 pt-[20vh] mb-[30vh] sm:mb-[30vh] sm:pt-[25vh] md:pt-[20vh] lg:pt-[12vh] xl:pt-[13vh] 2xl:pt-[22vh] md:h-screen">
 
-    <img class="absolute -top-20 right-0 w-[180px] md:w-[300px] h-auto pointer-events-none select-none rounded-3xl" src="/bg1.png"
+    <img class="absolute -top-20 right-0 w-[180px] md:w-[300px] h-auto pointer-events-none select-none rounded-3xl"
+         src="/bg1.png"
          alt="Photo de couleur pour le fond">
-    <img class="absolute -bottom-10 md:bottom-0 left-0 w-[180px] md:w-[300px] h-auto pointer-events-none select-none rounded-3xl"
-         src="/bg2.png" alt="Photo de couleur pour le fond">
+    <img
+        class="absolute -bottom-10 md:bottom-0 left-0 w-[180px] md:w-[300px] h-auto pointer-events-none select-none rounded-3xl"
+        src="/bg2.png" alt="Photo de couleur pour le fond">
 
     <div class="relative group">
       <p
@@ -208,11 +210,13 @@
         </p>
 
         <div class="flex justify-end pr-10 mt-2 sm:mt-0">
-          <a href="https://akoladsolutions.com" target="_blank" class="cursor-pointer">
-            <button class="btn-espresso floatY">
-              <i class="bi bi-link-45deg text-17-18-21-25"></i>
-              <p class="text-12-13-16-20">Lien vers le site web</p>
-            </button>
+          <a href="https://akoladsolutions.com"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-espresso floatY inline-flex items-center gap-2 cursor-pointer"
+          >
+            <i class="bi bi-link-45deg text-17-18-21-25"></i>
+            <span class="text-12-13-16-20">Lien vers le site web</span>
           </a>
         </div>
       </div>
