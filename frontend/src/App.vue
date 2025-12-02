@@ -1,12 +1,14 @@
 <template>
-  <div class="bg-vanilla bg-noise h-full">
-    <div v-if="!appReady" class="fixed inset-0 bg-vanilla z-[99999]"></div>
+  <main>
+    <div class="bg-vanilla bg-noise h-full">
+      <div v-if="!appReady" class="fixed inset-0 bg-vanilla z-[99999]"></div>
 
-    <CustomCursorComponent v-if="appReady"/>
-    <ScrollToTopComponent v-if="appReady"/>
+      <CustomCursorComponent v-if="appReady"/>
+      <ScrollToTopComponent v-if="appReady"/>
 
-    <router-view v-if="appReady"/>
-  </div>
+      <router-view v-if="appReady"/>
+    </div>
+  </main>
 </template>
 
 <script>
