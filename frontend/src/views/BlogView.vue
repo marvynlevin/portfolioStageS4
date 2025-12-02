@@ -36,13 +36,12 @@
     </h1>
 
     <!-- Image -->
-    <ResponsiveImageComponent
+    <img
         v-if="metadata.image"
         :src="metadata.image"
         :alt="metadata.title"
-        :sizes="{ mobile: 200, tablet: 300, desktop: 450, large: 600, default: 600 }"
-        :breakpoints="{ mobile: 640, tablet: 1024, desktop: 1280, large: 99999 }"
-        img-class="w-full rounded-lg mb-6"
+        loading="lazy"
+        class="w-full rounded-lg mb-6"
     />
 
     <!-- Contenu Markdown -->
