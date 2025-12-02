@@ -98,6 +98,8 @@ html.is-loading, html.is-loading * {
   border-radius: 0.375rem;
   font-style: italic;
   font-weight: 700;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 @media (min-width: 640px) {
@@ -250,8 +252,8 @@ html.is-loading, html.is-loading * {
   }
 
   .text-65-95-105-115 {
-  font-size: 105px;
-}
+    font-size: 105px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -288,7 +290,7 @@ html.is-loading, html.is-loading * {
   }
 
   .text-65-95-105-115 {
-  font-size: 140px;
-}
+    font-size: 140px;
+  }
 }
 </style>
