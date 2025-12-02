@@ -1,13 +1,13 @@
 <template>
   <div class="relative project-page px-[2%] sm:px-[5%] md:px-[10%] lg:px-[15%] py-10">
 
-            <!-- Bouton Retour -->
-        <button
-          @click="goBack"
-          class="fixed bottom-4 cursor-pointer left-4 py-3 px-4.5 rounded-full bg-blush text-white hover:bg-dusk transition-all duration-300 shadow-lg hover:-translate-y-2 transition-transform duration-200 z-[40]"
-        >
-          <i class="bi bi-arrow-bar-left text-[20px]"/>
-        </button>
+    <!-- Bouton Retour -->
+    <button
+        @click="goBack"
+        class="fixed bottom-4 cursor-pointer left-4 py-3 px-4.5 rounded-full bg-blush text-white hover:bg-dusk transition-all duration-300 shadow-lg hover:-translate-y-2 transition-transform duration-200 z-[40]"
+    >
+      <i class="bi bi-arrow-bar-left text-[20px]"/>
+    </button>
 
     <!-- Sous-titre + Action à droite -->
     <div class="flex items-center justify-between">
@@ -19,8 +19,8 @@
 
         <!-- Bouton Partager -->
         <button
-          @click="sharePage"
-          class="px-3 py-2 bg-espresso rounded-b-full flex items-center gap-2 text-vanilla cursor-pointer"
+            @click="sharePage"
+            class="px-3 py-2 bg-espresso rounded-b-full flex items-center gap-2 text-vanilla cursor-pointer"
         >
           <i class="bi bi-reply text-17-18-21-25"/>
         </button>
@@ -34,21 +34,22 @@
     </h1>
 
     <!-- Image -->
-    <img
-      v-if="metadata.image"
-      :src="metadata.image"
-      :alt="metadata.title"
-      class="w-full rounded-lg mb-6"
+    <ResponsiveImageComponent
+        v-if="metadata.image"
+        :src="metadata.image"
+        :alt="metadata.title"
+        :breakpoints="{ sm: 200, md: 400, lg: 600 }"
+        class="w-full rounded-lg mb-6"
     />
 
     <!-- Contenu Markdown -->
     <component
-      class="text-justify text-14-15-18-22 px-[8%] md:px-[0%] mb-10 md:mb-20"
-      :is="MarkdownComponent"
+        class="text-justify text-14-15-18-22 px-[8%] md:px-[0%] mb-10 md:mb-20"
+        :is="MarkdownComponent"
     />
   </div>
 
-    <!-- Bas de page -->
+  <!-- Bas de page -->
   <FooterComponent/>
 </template>
 
@@ -56,6 +57,7 @@
 import {ref, onMounted, watch} from 'vue'
 import {useRoute} from 'vue-router'
 import FooterComponent from "@/components/footer/FooterComponent.vue";
+import ResponsiveImageComponent from "@/components/img/ResponsiveImageComponent.vue";
 
 const route = useRoute()
 const metadata = ref({})
@@ -90,8 +92,8 @@ const sharePage = () => {
 
   if (navigator.share) {
     navigator
-      .share({ title, url })
-      .catch(err => console.warn("Partage annulé :", err))
+        .share({title, url})
+        .catch(err => console.warn("Partage annulé :", err))
   } else {
     navigator.clipboard.writeText(url)
     alert("Lien copié dans le presse-papier !")

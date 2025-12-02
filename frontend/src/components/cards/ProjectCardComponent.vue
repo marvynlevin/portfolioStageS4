@@ -5,12 +5,15 @@
 
 transform transition-transform duration-800 ease-out hover:scale-[1.02] hover:-rotate-1"
   >
+
     <!-- Image de fond -->
-    <div
+    <ResponsiveImageComponent
         v-if="backgroundImage"
-        class="absolute inset-0 bg-cover bg-center opacity-30 -z-10"
-        :style="{ backgroundImage: `url(${backgroundImage})` }"
-    ></div>
+        :src="backgroundImage"
+        alt="Image de fond du projet"
+        :breakpoints="{ sm: 200, md: 400, lg: 600 }"
+        class="absolute inset-0 w-full h-full object-cover opacity-30 -z-10"
+    />
 
     <!-- Bannière -->
     <div class="w-full bg-espresso text-vanilla px-6 py-2 md:py-3 flex items-center justify-between">
@@ -36,7 +39,8 @@ transform transition-transform duration-800 ease-out hover:scale-[1.02] hover:-r
     <!-- Contenu -->
     <div class="px-6 py-6 md:py-12 space-y-4">
       <!-- Description -->
-      <p class="text-espresso font-semibold text-14-15-16-20 leading-relaxed text-justify md:text-left" v-html="description"></p>
+      <p class="text-espresso font-semibold text-14-15-16-20 leading-relaxed text-justify md:text-left"
+         v-html="description"></p>
 
       <!-- Liste -->
       <ul class="list-disc pl-6 text-espresso font-semibold text-14-15-16-20 text-justify md:text-left">
@@ -66,6 +70,8 @@ transform transition-transform duration-800 ease-out hover:scale-[1.02] hover:-r
 </template>
 
 <script setup>
+import ResponsiveImageComponent from "@/components/img/ResponsiveImageComponent.vue";
+
 defineProps({
   title: String,
   links: {
