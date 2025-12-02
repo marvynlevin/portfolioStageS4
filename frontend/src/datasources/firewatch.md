@@ -9,7 +9,6 @@ meta:
   - name: keywords
     content: "FireWatch, projet universitaire, développement web, full-stack, application mobile, IA, prévention incendies, Vue.js, Flutter, Node.js"
 ---
-
 <TitleComponent
 align="text-center"
 text="Introduction"
