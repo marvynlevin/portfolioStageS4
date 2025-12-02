@@ -250,12 +250,12 @@
         </p>
 
         <div class="flex justify-end pr-10 mt-2 sm:mt-0">
-          <a href="https://github.com/marvynlevin?tab=repositories" target="_blank" class="cursor-pointer">
-            <button class="btn-espresso hover:bg-noise floatY">
-              <i class="bi bi-link-45deg text-17-18-21-25"></i>
-              <p class="text-12-13-16-20">Lien vers mon Github</p>
-            </button>
-          </a>
+          <button class="btn-espresso floatY"
+                  onclick="window.open('https://github.com/marvynlevin?tab=repositories', '_blank')"
+                  aria-label="Lien vers mon GitHub">
+            <i class="bi bi-link-45deg text-17-18-21-25"></i>
+            <span class="text-12-13-16-20">Lien vers mon Github</span>
+          </button>
         </div>
       </div>
     </div>
