@@ -521,8 +521,8 @@
         </div>
 
         <div class="flex justify-start">
-          <a href="/files/Marvyn_LEVIN_cv.pdf"
-             download="Marvyn_LEVIN_cv.pdf"
+          <a href="/files/Marvyn_LEVIN_cv_v2.pdf"
+             download="Marvyn_LEVIN_cv_v2.pdf"
              class="cursor-pointer">
             <button class="btn-espresso hover:bg-noise">
               <i class="bi bi-patch-plus text-17-18-21-25"></i>
